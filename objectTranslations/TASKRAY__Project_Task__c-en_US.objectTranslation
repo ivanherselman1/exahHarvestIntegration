@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- TaskRay Task Field Set --></label>
+        <name>TASKRAY__Project_Task_Field_Set</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Task Card Labels --></label>
+        <name>TASKRAY__Task_Card_Labels</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Task Groupings (Kanban and Row Views) --></label>
+        <name>TASKRAY__Task_Grouping</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Task Groupings (My Work View) --></label>
+        <name>TASKRAY__Task_Groupings_My_Work_View</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Archived --></label>
+        <name>TASKRAY__Archived__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blocked --></label>
+        <name>TASKRAY__Blocked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated End Date --></label>
+        <name>TASKRAY__Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent On (Legacy Dependencies) --></label>
+        <name>TASKRAY__Dependent_On__c</name>
+        <relationshipLabel><!-- TaskRay Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dependent Update Pending --></label>
+        <name>TASKRAY__Dependent_Update_Pending__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>TASKRAY__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- List --></label>
+        <name>TASKRAY__List__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalisation</masterLabel>
+            <translation><!-- Finalisation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress - Extended</masterLabel>
+            <translation><!-- In Progress - Extended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inbox</masterLabel>
+            <translation><!-- Inbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marked for Execution</masterLabel>
+            <translation><!-- Marked for Execution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planning</masterLabel>
+            <translation><!-- Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting for Client</masterLabel>
+            <translation><!-- Waiting for Client --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>TASKRAY__Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>TASKRAY__Project__c</name>
+        <relationshipLabel><!-- TaskRay Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Repeat Created --></label>
+        <name>TASKRAY__RepeatCreated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Repeat End Date --></label>
+        <name>TASKRAY__Repeat_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Repeat Every --></label>
+        <name>TASKRAY__Repeat_Every__c</name>
+    </fields>
+    <fields>
+        <label><!-- Repeat Interval Type --></label>
+        <name>TASKRAY__Repeat_Interval_Type__c</name>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does not repeat</masterLabel>
+            <translation><!-- Does not repeat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly</masterLabel>
+            <translation><!-- Yearly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Repeat Week Days --></label>
+        <name>TASKRAY__Repeat_Week_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>TASKRAY__SortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__Status__c</name>
+        <picklistValues>
+            <masterLabel>Finished</masterLabel>
+            <translation><!-- Finished --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Yet Started</masterLabel>
+            <translation><!-- Not Yet Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Started</masterLabel>
+            <translation><!-- Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Used to grant access to Customer/External Accounts (Sharing Sets only). --></help>
+        <label><!-- Account (Community Access) --></label>
+        <name>TASKRAY__trAccountCommAccess__c</name>
+        <relationshipLabel><!-- TaskRay Tasks (Account (Community Access)) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>TASKRAY__trAccount__c</name>
+        <relationshipLabel><!-- TaskRay Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Actual Billable Time (hrs) --></label>
+        <name>TASKRAY__trActualBillableHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of business days that it took to complete the task. --></help>
+        <label><!-- Actual Business Duration --></label>
+        <name>TASKRAY__trActualBusinessDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date of when the task was completed. --></help>
+        <label><!-- Actual Completion Date --></label>
+        <name>TASKRAY__trActualCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days that it took to complete the task (includes nonworking days). --></help>
+        <label><!-- Actual Duration --></label>
+        <name>TASKRAY__trActualDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available for External Sharing --></label>
+        <name>TASKRAY__trAvailableExternal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Business Duration --></label>
+        <name>TASKRAY__trBusinessDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Project Schedule --></label>
+        <name>TASKRAY__trBusinessHrsOverride__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a task was completed before its scheduled Estimated End Date. --></help>
+        <label><!-- Completed Ahead of Schedule --></label>
+        <name>TASKRAY__trCompletedAheadOfSchedule2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a task was completed after its scheduled Estimated End Date. --></help>
+        <label><!-- Completed Behind Schedule --></label>
+        <name>TASKRAY__trCompletedBehindSchedule2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed --></label>
+        <name>TASKRAY__trCompleted__c</name>
+    </fields>
+    <fields>
+        <help><!-- The relative weight of this task compared to others in the task group and project. Represented by a number. --></help>
+        <label><!-- Custom Task Weight --></label>
+        <name>TASKRAY__trCustomTaskWeight__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependency Offset (Legacy Dependencies) --></label>
+        <name>TASKRAY__trDepOffset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Duration --></label>
+        <name>TASKRAY__trDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedHours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Dependencies Schedule Conflict --></label>
+        <name>TASKRAY__trHasScheduleConflict__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden --></label>
+        <name>TASKRAY__trHidden__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide Until (Days Before Start) --></label>
+        <name>TASKRAY__trHideUntilOffset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide Until --></label>
+        <name>TASKRAY__trHideUntil__c</name>
+    </fields>
+    <fields>
+        <help><!-- Restricts external access to a Task. --></help>
+        <label><!-- Internal Only --></label>
+        <name>TASKRAY__trInternalOnly__c</name>
+    </fields>
+    <fields>
+        <label><!-- Milestone --></label>
+        <name>TASKRAY__trIsMilestone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lock Dates --></label>
+        <name>TASKRAY__trLockDates__c</name>
+    </fields>
+    <fields>
+        <help><!-- Tracks the number of times the task was marked as blocked. --></help>
+        <label><!-- Number of Times Blocked --></label>
+        <name>TASKRAY__trNumberOfTimesBlocked__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a premium only feature that allows incomplete tasks to contribute to Task Group and Project completion. The &apos;Ongoing Task Progress Type&apos; must be populated in order to use this feature. --></help>
+        <label><!-- Ongoing Task Progress Percent --></label>
+        <name>TASKRAY__trOngoingTaskProgressPercent__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a premium only feature that allows incomplete tasks to contribute to Task Group and Project completion. Time-based OTP utilizes logged time to show task progress, while Custom OTP gives you control over a task&apos;s progress. The &apos;Ongoing Task Progress Percent&apos; value reflects the task&apos;s completion percentage. --></help>
+        <label><!-- Ongoing Task Progress Type --></label>
+        <name>TASKRAY__trOngoingTaskProgressType__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time-Based</masterLabel>
+            <translation><!-- Time-Based --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>TASKRAY__trOpportunity__c</name>
+        <relationshipLabel><!-- TaskRay Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pending Interview Count --></label>
+        <name>TASKRAY__trPendingInterviewCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Predecessor Tasks Incomplete --></label>
+        <name>TASKRAY__trPredecessorTasksIncomplete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Schedule Id --></label>
+        <name>TASKRAY__trProjectBusinessHoursId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Sort Order --></label>
+        <name>TASKRAY__trProjectSortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Conflict --></label>
+        <name>TASKRAY__trScheduleConflict__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>TASKRAY__trStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Group --></label>
+        <name>TASKRAY__trTaskGroup__c</name>
+        <relationshipLabel><!-- TaskRay Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Template Source --></label>
+        <name>TASKRAY__trTemplateSource__c</name>
+        <relationshipLabel><!-- Cloned Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Should time entries related to this Task be defaulted to non-billable or billable? --></help>
+        <label><!-- Default Time Type --></label>
+        <name>TASKRAY__trTimeType__c</name>
+        <picklistValues>
+            <masterLabel>Billable</masterLabel>
+            <translation><!-- Billable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Billable</masterLabel>
+            <translation><!-- Non-Billable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Time Entry Count --></label>
+        <name>TASKRAY__trTime_Entry_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Time (hrs) --></label>
+        <name>TASKRAY__trTotalTimeOnTask__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a task was ever blocked. --></help>
+        <label><!-- Was Task Ever Blocked? --></label>
+        <name>TASKRAY__trWasTaskEverBlocked__c</name>
+    </fields>
+    <layouts>
+        <layout>Project Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dates --></label>
+            <section>Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label><!-- Added to TaskRay Project Team --></label>
+        <name>TASKRAY__Project_Member_added_in_TaskRay</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can modify the Internal Only field on Tasks. Contact your system administrator if you would like access to this field. --></errorMessage>
+        <name>TASKRAY__Internal_Only_Restricted_to_Proj_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This task cannot be completed because it has a predecessor task which is not complete. --></errorMessage>
+        <name>TASKRAY__Prevent_Complete_If_Dependent_Incomplete</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- View_in_TaskRay --></label>
+        <name>TASKRAY__View_in_TaskRay</name>
+    </webLinks>
+</CustomObjectTranslation>

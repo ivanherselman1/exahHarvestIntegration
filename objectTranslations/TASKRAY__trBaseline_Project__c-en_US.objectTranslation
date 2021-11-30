@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Estimated End Date --></label>
+        <name>TASKRAY__Project_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>TASKRAY__Project_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Archived --></label>
+        <name>TASKRAY__Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date of when the project was completed. --></help>
+        <label><!-- Actual Completion Date --></label>
+        <name>TASKRAY__trActualCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days that it took to complete the project. --></help>
+        <label><!-- Actual Duration --></label>
+        <name>TASKRAY__trActualDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Time (hrs) --></label>
+        <name>TASKRAY__trActualHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a project is complete. --></help>
+        <label><!-- Completed --></label>
+        <name>TASKRAY__trCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress --></label>
+        <name>TASKRAY__trCompletionPercentage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture a customer&apos;s desired outcome(s) for their onboarding process. Can be populated from the Desired Outcomes field on Opportunity. --></help>
+        <label><!-- Desired Outcomes --></label>
+        <name>TASKRAY__trDesiredOutcomes__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date Variance --></label>
+        <name>TASKRAY__trEndDateVariance__c</name>
+    </fields>
+    <fields>
+        <help><!-- Estimated number of days that it should take to complete the project as scheduled. --></help>
+        <label><!-- Estimated Duration --></label>
+        <name>TASKRAY__trEstimatedDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture external feedback about a customer&apos;s onboarding experience. --></help>
+        <label><!-- External Feedback --></label>
+        <name>TASKRAY__trExternalFeedback__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture the external sentiment of a customer onboarding project. --></help>
+        <label><!-- External Sentiment --></label>
+        <name>TASKRAY__trExternalSentiment__c</name>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied</masterLabel>
+            <translation><!-- Unsatisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Unsatisfied</masterLabel>
+            <translation><!-- Very Unsatisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the date of when the project was initially projected to be completed. --></help>
+        <label><!-- Initial Projected Completion Date --></label>
+        <name>TASKRAY__trInitialProjectedCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the duration of the project as it was initially projected. --></help>
+        <label><!-- Initial Projected Duration --></label>
+        <name>TASKRAY__trInitialProjectedDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture the internal sentiment of a customer onboarding project. --></help>
+        <label><!-- Internal Sentiment --></label>
+        <name>TASKRAY__trInternalSentiment__c</name>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied</masterLabel>
+            <translation><!-- Unsatisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Unsatisfied</masterLabel>
+            <translation><!-- Very Unsatisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Baseline Long Name --></label>
+        <name>TASKRAY__trLongName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Baseline Name Suffix --></label>
+        <name>TASKRAY__trNameSuffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>TASKRAY__trNotes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle. --></help>
+        <label><!-- Onboarding Summary Notes --></label>
+        <name>TASKRAY__trOnboardingSummaryNotes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to identify the primary customer contact for onboarding. --></help>
+        <label><!-- Primary Onboarding Contact --></label>
+        <name>TASKRAY__trPrimaryOnboardingContact__c</name>
+        <relationshipLabel><!-- Primary Onboarding Contact (TaskRay Baselines) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>TASKRAY__trProject__c</name>
+        <relationshipLabel><!-- TaskRay Baselines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date Variance --></label>
+        <name>TASKRAY__trStartDateVariance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TASKRAY__trStatus__c</name>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>CPQ</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>TaskRay Baseline Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

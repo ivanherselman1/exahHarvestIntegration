@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>dev@exah.co.za</contactEmail>
+    <label>Gitlab CI</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIDdDCCAlwCCQCJjLBq7l/kfTANBgkqhkiG9w0BAQsFADB8MQswCQYDVQQGEwJaQTEQMA4GA1UECAwHR2F1dGVuZzENMAsGA1UECgwERVhBSDEUMBIGA1UECwwLRGV2ZWxvcG1lbnQxFzAVBgNVBAMMDmRldi5leGFoLmNvLnphMR0wGwYJKoZIhvcNAQkBFg5kZXZAZXhhaC5jby56YTAeFw0xOTA2MTEwMDQ4MjlaFw0yMDA2MTAwMDQ4MjlaMHwxCzAJBgNVBAYTAlpBMRAwDgYDVQQIDAdHYXV0ZW5nMQ0wCwYDVQQKDARFWEFIMRQwEgYDVQQLDAtEZXZlbG9wbWVudDEXMBUGA1UEAwwOZGV2LmV4YWguY28uemExHTAbBgkqhkiG9w0BCQEWDmRldkBleGFoLmNvLnphMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmdOHTnBWa+8Q5of2r46ASPpFtwh/Tcctv1vVXFWTXNY9zgXIznw8GXnnxMQiqtd16uKQjo7P6tgyJWkLL+0lANUXymgnkPLlfFIBlgL+duSKvloF4EKApK7MTAL2Xoebcbi0Zrgu2eLg4ZNuBPaaRpj8a3FLPE+DZ673Fy6i+KWWoXGFZy7k2z+X7JwJnafLJU2122SOV0mvU/9/vpskcKjYMGSTNcRbKC6hZhL7rfkw8XwZLkixz0ZCy2BPjYB5Q7hTH8SW2ztdPaY7tvkUnxkCyTRBNC8VSlBTxY2xAzpeQOA6CRNWcjY7kQ68dfNXtfKHymrh94F+pQxiMrhr7QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBiSmR4zpAGQOAZqNMmajqdLJ4YoTTeC3iE6BwFFK6IgRUWiX5ATNxHviI1mzDcWifIqn7fzYN/3ujDs8aPKGlB1k1o/ohMkVV5p0jF2pVMbvjto3bZcQK2TrituKxRs7HDS+M+UiwNixxtsbGWKVqE8KEU942vlpHev8if4e2BAJkn3upBKHHM4sOPaLZ1P4PSVFmYtEadxp3qAkZ/Kriw0MB1SD9y04R3cQULvWG5ZoVyzBQB6MFJFZtd4gsrB+Y9T7J9Flk9+3gfzCb5iQl2+uqHyOgvYib1ceYoRBuqBUC8IoPQEHg2khtcYjR6KQkvUR8oBnaYNxWCAaR+PU9y</certificate>
+        <consumerKey>3MVG9KlmwBKoC7U0tQGO2yaWKdQNXe2Td0J3WFqe2GET9B3WI0Wb5FOIxOiXNJH2Dl7cALcgZMxi89PCWKluP</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+    <profileName>Standard User</profileName>
+    <profileName>Chatter Free User</profileName>
+    <profileName>Standard Clone</profileName>
+</ConnectedApp>

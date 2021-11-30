@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active On-Hold History Record --></label>
+        <name>TASKRAY__trActiveOnHold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Held By --></label>
+        <name>TASKRAY__trHeldBy__c</name>
+        <relationshipLabel><!-- TaskRay  On-Hold History Records (Held By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- On-Hold Date --></label>
+        <name>TASKRAY__trOnHoldDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration (days) --></label>
+        <name>TASKRAY__trOnHoldDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>TASKRAY__trOnHoldNotes__c</name>
+    </fields>
+    <fields>
+        <label><!-- On-Hold Reason --></label>
+        <name>TASKRAY__trOnHoldReason__c</name>
+        <picklistValues>
+            <masterLabel>Customer Requested Hold</masterLabel>
+            <translation><!-- Customer Requested Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred Project Start</masterLabel>
+            <translation><!-- Deferred Project Start --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost Contact with Customer</masterLabel>
+            <translation><!-- Lost Contact with Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resource Constraints</masterLabel>
+            <translation><!-- Resource Constraints --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Project --></label>
+        <name>TASKRAY__trProject__c</name>
+        <relationshipLabel><!-- On-Hold History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resumed By --></label>
+        <name>TASKRAY__trResumedBy__c</name>
+        <relationshipLabel><!-- TaskRay  On-Hold History Records (Resumed By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resumed Date --></label>
+        <name>TASKRAY__trResumedDate__c</name>
+    </fields>
+    <layouts>
+        <layout>On-Hold History Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

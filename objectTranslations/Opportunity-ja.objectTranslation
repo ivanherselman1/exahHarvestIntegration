@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Amount Won --></label>
+        <name>Amount_Won__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Confirmed --></label>
+        <name>Budget_Confirmed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discovery Completed --></label>
+        <name>Discovery_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email status --></label>
+        <name>Email_status__c</name>
+        <picklistValues>
+            <masterLabel>Last email in</masterLabel>
+            <translation><!-- Last email in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last email out</masterLabel>
+            <translation><!-- Last email out --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- License Type --></label>
+        <name>License_Type__c</name>
+        <picklistValues>
+            <masterLabel>B2B Commerce</masterLabel>
+            <translation><!-- B2B Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B2C Commerce</masterLabel>
+            <translation><!-- B2C Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPQ</masterLabel>
+            <translation><!-- CPQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communities</masterLabel>
+            <translation><!-- Communities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conga</masterLabel>
+            <translation><!-- Conga --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datorama</masterLabel>
+            <translation><!-- Datorama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Einstein</masterLabel>
+            <translation><!-- Einstein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Cloud</masterLabel>
+            <translation><!-- Financial Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flowgear</masterLabel>
+            <translation><!-- Flowgear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Cloud</masterLabel>
+            <translation><!-- Marketing Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mulesoft</masterLabel>
+            <translation><!-- Mulesoft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pardot</masterLabel>
+            <translation><!-- Pardot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform</masterLabel>
+            <translation><!-- Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quip</masterLabel>
+            <translation><!-- Quip --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Cloud</masterLabel>
+            <translation><!-- Sales Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Cloud</masterLabel>
+            <translation><!-- Service Cloud --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loss Reason --></label>
+        <name>Loss_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Lost to Competitor</masterLabel>
+            <translation><!-- Lost to Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Budget / Lost Funding</masterLabel>
+            <translation><!-- No Budget / Lost Funding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Decision / Non-Responsive</masterLabel>
+            <translation><!-- No Decision / Non-Responsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Poll Question --></label>
+        <name>Poll_Question__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Poll Response --></label>
+        <name>Poll_Response__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous Stage --></label>
+        <name>Previous_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Archived Closed Won</masterLabel>
+            <translation><!-- Archived Closed Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Audit meeting done</masterLabel>
+            <translation><!-- Audit meeting done --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation><!-- Closed Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won</masterLabel>
+            <translation><!-- Closed Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot for forecast</masterLabel>
+            <translation><!-- Hot for forecast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Lead</masterLabel>
+            <translation><!-- New Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal Accepted</masterLabel>
+            <translation><!-- Proposal Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>invoiced</masterLabel>
+            <translation><!-- invoiced --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ROI Analysis Completed --></label>
+        <name>ROI_Analysis_Completed__c</name>
+    </fields>
+    <fields>
+        <help>修正対象契約へのルックアップ。</help>
+        <label><!-- Amended Contract --></label>
+        <name>SBQQ__AmendedContract__c</name>
+        <relationshipLabel><!-- Amendment Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Salesforce CPQ では、この項目を使用して納入商品とサブスクリプションを自動的に変換します。</help>
+        <label><!-- Contracted --></label>
+        <name>SBQQ__Contracted__c</name>
+    </fields>
+    <fields>
+        <help>契約を作成せずに契約価格を作成する場合は、このチェックボックスをオンにします。</help>
+        <label><!-- Create Contracted Prices --></label>
+        <name>SBQQ__CreateContractedPrices__c</name>
+    </fields>
+    <fields>
+        <help>修正: 再見積トランザクションの一意の ID であり、元の主見積の ID です。</help>
+        <label><!-- Order Group ID --></label>
+        <name>SBQQ__OrderGroupID__c</name>
+    </fields>
+    <fields>
+        <help>主見積から注文を自動的に作成するには、このチェックボックスをオンにします。</help>
+        <label><!-- Ordered --></label>
+        <name>SBQQ__Ordered__c</name>
+    </fields>
+    <fields>
+        <help>Salesforce CPQ では、これを使用してこの商談の主見積を指し示します。</help>
+        <label><!-- Primary Quote --></label>
+        <name>SBQQ__PrimaryQuote__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quote Pricebook Id --></label>
+        <name>SBQQ__QuotePricebookId__c</name>
+    </fields>
+    <fields>
+        <help>この商談が更新商談であることを示します。</help>
+        <label><!-- Renewal --></label>
+        <name>SBQQ__Renewal__c</name>
+    </fields>
+    <fields>
+        <help>この更新商談によって更新される契約。複数の契約がこの商談に積み上げ集計されている場合、これは主契約を指し示します。</help>
+        <label><!-- Renewed Contract --></label>
+        <name>SBQQ__RenewedContract__c</name>
+        <relationshipLabel><!-- Renewal Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Targets --></label>
+        <name>Sales_Targets__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Salesforce AE --></label>
+        <name>Salesforce_AE__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to store key information about a deal that can be referenced during a customer&apos;s onboarding project. --></help>
+        <label><!-- Deal Handoff Notes --></label>
+        <name>TASKRAY__trDealHandoffNotes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture a customer&apos;s desired outcome(s) for their onboarding process. --></help>
+        <label><!-- Desired Outcomes --></label>
+        <name>TASKRAY__trDesiredOutcomes__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will be automatically updated if the TaskRay Onboarding Kickoff Flow has been completed for a given Opportunity. --></help>
+        <label><!-- Onboarding Kickoff Completed --></label>
+        <name>TASKRAY__trOnboardingKickoffCompleted__c</name>
+    </fields>
+    <layouts>
+        <layout>CPQ Opportunity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Recalculating --></label>
+            <section>Recalculating</section>
+        </sections>
+        <sections>
+            <label><!-- Salesforce CPQ Information --></label>
+            <section>Salesforce CPQ Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- EXAH sales opportunities. --></description>
+        <label><!-- EXAH --></label>
+        <name>EXAH</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CongaSign_sendForSignature --></label>
+        <name>CongaSign_sendForSignature</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Assets --></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Contract --></label>
+        <name>SBQQ__Amend_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateOrder --></label>
+        <name>SBQQ__CreateOrder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Include_Document --></label>
+        <name>SBQQ__Include_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+</CustomObjectTranslation>

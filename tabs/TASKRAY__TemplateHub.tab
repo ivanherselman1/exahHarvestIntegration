@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <icon>TASKRAY__TaskRay/TASKRAY__TaskRayTemplateHub_for_SF1.png</icon>
+    <label>TaskRay Template Hub</label>
+    <motif>Custom204: TV Widescreen</motif>
+    <page>TASKRAY__trtemplatehub</page>
+</CustomTab>

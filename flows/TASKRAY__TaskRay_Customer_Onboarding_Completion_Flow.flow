@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionCalls>
+        <name>Calculate_Customer_Onboarding_Score</name>
+        <label>Calculate Customer Onboarding Score</label>
+        <locationX>479</locationX>
+        <locationY>981</locationY>
+        <actionName>TASKRAY:trFlowLocalActionCalculateOnboardingScore</actionName>
+        <actionType>component</actionType>
+        <connector>
+            <targetReference>Update_Project_Customer_Onboarding_Score</targetReference>
+        </connector>
+        <inputParameters>
+            <name>projectId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>varCustomerOnboardingScore</assignToReference>
+            <name>customerOnboardingScore</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Redirect_on_Flow_Finish</name>
+        <label>Redirect on Flow Finish</label>
+        <locationX>482</locationX>
+        <locationY>1978</locationY>
+        <actionName>TASKRAY:trFlowLocalActionRedirect</actionName>
+        <actionType>component</actionType>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>redirectMode</name>
+            <value>
+                <stringValue>closeModalInApp</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <choices>
+        <description>Displays the existing value of the External Sentiment picklist if it has been populated before this Flow runs.  Uses a formula to display the picklist value label.</description>
+        <name>choiceExternalSentimentDefaultValue</name>
+        <choiceText>{!formulaExternalSentimentLabel}</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <elementReference>recordvarProject.TASKRAY__trExternalSentiment__c</elementReference>
+        </value>
+    </choices>
+    <choices>
+        <description>Displays the existing value of the Internal Sentiment picklist if it has been populated before this Flow runs.  Uses a formula to display the picklist value label.</description>
+        <name>choiceInternalSentimentDefaultValue</name>
+        <choiceText>{!formulaInternalSentimentLabel}</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <elementReference>recordvarProject.TASKRAY__trInternalSentiment__c</elementReference>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceNotApplicable</name>
+        <choiceText>N/A</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Archive_Project</name>
+        <label>Archive Project?</label>
+        <locationX>470</locationX>
+        <locationY>1815</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Archive_Project</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Archive_This_Project</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Project_Archive</targetReference>
+            </connector>
+            <label>Yes - Archive Project</label>
+        </rules>
+        <rules>
+            <name>No_Do_Not_Archive_Project</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Archive_This_Project</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Redirect_on_Flow_Finish</targetReference>
+            </connector>
+            <label>No - Do Not Archive Project</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Completion_Screen_Decision</name>
+        <label>Completion Screen Decision</label>
+        <locationX>464</locationX>
+        <locationY>169</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Internal_External_Sentiment_Not_Populated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trInternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trExternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Complete_Your_Onboarding_Project_Not_Prepopulated</targetReference>
+            </connector>
+            <label>Internal &amp; External Sentiment - Not Populated</label>
+        </rules>
+        <rules>
+            <name>Internal_Sentiment_Populated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trInternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trExternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Complete_Your_Onboarding_Project_Internal_Sentiment_Prepopulated</targetReference>
+            </connector>
+            <label>Internal Sentiment Populated</label>
+        </rules>
+        <rules>
+            <name>External_Sentiment_Populated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trExternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trInternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Complete_Your_Onboarding_Project_External_Sentiment_Prepopulated</targetReference>
+            </connector>
+            <label>External Sentiment Populated</label>
+        </rules>
+        <rules>
+            <name>Internal_External_Sentiment_Populated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trInternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trExternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Complete_Your_Onboarding_Project_Both_Sentiments_Prepopulated</targetReference>
+            </connector>
+            <label>Internal &amp; External Sentiment - Populated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Populate_Account_Customer_Onboarding_Score</name>
+        <label>Populate Account Customer Onboarding Score?</label>
+        <locationX>471</locationX>
+        <locationY>1632</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Populate_Customer_Onboarding_Score</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Populate_Customer_Onboarding_Score_on_Account</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varCustomerOnboardingScore</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trAccount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_Customer_Onboarding_Score</targetReference>
+            </connector>
+            <label>Yes - Populate Customer Onboarding Score</label>
+        </rules>
+        <rules>
+            <name>No_Do_Not_Populate_Customer_Onboarding_Score</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Populate_Customer_Onboarding_Score_on_Account</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trAccount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varCustomerOnboardingScore</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Archive_Project</targetReference>
+            </connector>
+            <label>No - Do Not Populate Customer Onboarding Score</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Populate_Account_Desired_Outcomes</name>
+        <label>Populate Account Desired Outcomes?</label>
+        <locationX>471</locationX>
+        <locationY>1450</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Populate_Desired_Outcomes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Populate_Desired_Outcomes_on_Account</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trAccount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_Desired_Outcomes</targetReference>
+            </connector>
+            <label>Yes - Populate Desired Outcomes</label>
+        </rules>
+        <rules>
+            <name>No_Do_Not_Populate_Desired_Outcomes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Populate_Desired_Outcomes_on_Account</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarProject.TASKRAY__trAccount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_Account_Customer_Onboarding_Score</targetReference>
+            </connector>
+            <label>No - Do Not Populate Desired Outcomes</label>
+        </rules>
+    </decisions>
+    <description>This template Flow helps complete customer onboarding projects in TaskRay.</description>
+    <dynamicChoiceSets>
+        <name>choiceSetExternalSentiment</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>TASKRAY__trExternalSentiment__c</picklistField>
+        <picklistObject>TASKRAY__Project__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>choiceSetInternalSentiment</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>TASKRAY__trInternalSentiment__c</picklistField>
+        <picklistObject>TASKRAY__Project__c</picklistObject>
+    </dynamicChoiceSets>
+    <formulas>
+        <description>Displays a contextual message depending on whether the Customer Onboarding Score was calculated.</description>
+        <name>formulaCustomerOnboardingScoreCheck</name>
+        <dataType>String</dataType>
+        <expression>IF(ISNULL({!varCustomerOnboardingScore}), &quot;This project did not have enough information to calculate a Customer Onboarding Score.&quot;, &quot;This project was assigned a Customer Onboarding Score of &quot; &amp; TEXT({!varCustomerOnboardingScore}) &amp; &quot; out of 10.&quot;)</expression>
+    </formulas>
+    <formulas>
+        <description>A formula that displays the label of a given External Sentiment picklist value.</description>
+        <name>formulaExternalSentimentLabel</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!recordvarProject.TASKRAY__trExternalSentiment__c},
+&quot;1&quot;, &quot;Very Unsatisfied (current value)&quot;,
+&quot;2&quot;, &quot;Unsatisfied (current value)&quot;,
+&quot;3&quot;, &quot;Neutral (current value)&quot;,
+&quot;4&quot;, &quot;Satisfied (current value)&quot;,
+&quot;5&quot;, &quot;Very Satisfied (current value)&quot;,
+null
+)</expression>
+    </formulas>
+    <formulas>
+        <description>A formula that displays the label of a given Internal Sentiment picklist value.</description>
+        <name>formulaInternalSentimentLabel</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!recordvarProject.TASKRAY__trInternalSentiment__c},
+&quot;1&quot;, &quot;Very Unsatisfied (current value)&quot;,
+&quot;2&quot;, &quot;Unsatisfied (current value)&quot;,
+&quot;3&quot;, &quot;Neutral (current value)&quot;,
+&quot;4&quot;, &quot;Satisfied (current value)&quot;,
+&quot;5&quot;, &quot;Very Satisfied (current value)&quot;,
+null
+)</expression>
+    </formulas>
+    <interviewLabel>TaskRay Customer Onboarding Completion Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>TaskRay Customer Onboarding Completion Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Project</name>
+        <label>Get Project</label>
+        <locationX>472</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Completion_Screen_Decision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>TASKRAY__Project__c</object>
+        <outputReference>recordvarProject</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>TASKRAY__trAccount__c</queriedFields>
+        <queriedFields>TASKRAY__trDesiredOutcomes__c</queriedFields>
+        <queriedFields>TASKRAY__trOnboardingSummaryNotes__c</queriedFields>
+        <queriedFields>TASKRAY__trInternalSentiment__c</queriedFields>
+        <queriedFields>TASKRAY__trExternalSentiment__c</queriedFields>
+        <queriedFields>TASKRAY__trExternalFeedback__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account_Customer_Onboarding_Score</name>
+        <label>Update Account - Customer Onboarding Score</label>
+        <locationX>640</locationX>
+        <locationY>1716</locationY>
+        <connector>
+            <targetReference>Archive_Project</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>faultScreen_1</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordvarProject.TASKRAY__trAccount__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TASKRAY__trCustomerOnboardingScore__c</field>
+            <value>
+                <elementReference>varCustomerOnboardingScore</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_Desired_Outcomes</name>
+        <label>Update Account - Desired Outcomes</label>
+        <locationX>639</locationX>
+        <locationY>1543</locationY>
+        <connector>
+            <targetReference>Populate_Account_Customer_Onboarding_Score</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>faultScreen_1</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordvarProject.TASKRAY__trAccount__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TASKRAY__trDesiredOutcomes__c</field>
+            <value>
+                <elementReference>recordvarProject.TASKRAY__trDesiredOutcomes__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Project</name>
+        <label>Update Project</label>
+        <locationX>180</locationX>
+        <locationY>639</locationY>
+        <connector>
+            <targetReference>Calculate_Customer_Onboarding_Score</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>faultScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TASKRAY__trCompleted__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trExternalFeedback__c</field>
+            <value>
+                <elementReference>Customer_Feedback</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trExternalSentiment__c</field>
+            <value>
+                <elementReference>How_Satisfied_is_the_Customer_with_How_This_Onboarding_Project_Went</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trInternalSentiment__c</field>
+            <value>
+                <elementReference>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trOnboardingSummaryNotes__c</field>
+            <value>
+                <elementReference>Onboarding_Summary_Notes</elementReference>
+            </value>
+        </inputAssignments>
+        <object>TASKRAY__Project__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Project_1</name>
+        <label>Update Project</label>
+        <locationX>369</locationX>
+        <locationY>639</locationY>
+        <connector>
+            <targetReference>Calculate_Customer_Onboarding_Score</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>faultScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TASKRAY__trCompleted__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trExternalFeedback__c</field>
+            <value>
+                <elementReference>Customer_Feedback_1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trExternalSentiment__c</field>
+            <value>
+                <elementReference>How_Satisfied_is_the_Customer_with_How_This_Onboarding_Project_Went_1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trInternalSentiment__c</field>
+            <value>
+                <elementReference>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went_1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trOnboardingSummaryNotes__c</field>
+            <value>
+                <elementReference>Onboarding_Summary_Notes_1</elementReference>
+            </value>
+        </inputAssignments>
+        <object>TASKRAY__Project__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Project_2</name>
+        <label>Update Project</label>
+        <locationX>575</locationX>
+        <locationY>642</locationY>
+        <connector>
+            <targetReference>Calculate_Customer_Onboarding_Score</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>faultScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TASKRAY__trCompleted__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trExternalFeedback__c</field>
+            <value>
+                <elementReference>Customer_Feedback_2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trExternalSentiment__c</field>
+            <value>
+                <elementReference>How_Satisfied_is_the_Customer_with_How_This_Onboarding_Project_Went_2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trInternalSentiment__c</field>
+            <value>
+                <elementReference>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went_2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trOnboardingSummaryNotes__c</field>
+            <value>
+                <elementReference>Onboarding_Summary_Notes_2</elementReference>
+            </value>
+        </inputAssignments>
+        <object>TASKRAY__Project__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Project_3</name>
+        <label>Update Project</label>
+        <locationX>780</locationX>
+        <locationY>641</locationY>
+        <connector>
+            <targetReference>Calculate_Customer_Onboarding_Score</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>faultScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TASKRAY__trCompleted__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trExternalFeedback__c</field>
+            <value>
+                <elementReference>Customer_Feedback_3</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trExternalSentiment__c</field>
+            <value>
+                <elementReference>How_Satisfied_is_the_Customer_With_How_This_Onboarding_Project_Went_3</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trInternalSentiment__c</field>
+            <value>
+                <elementReference>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went_3</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TASKRAY__trOnboardingSummaryNotes__c</field>
+            <value>
+                <elementReference>Onboarding_Summary_Notes_3</elementReference>
+            </value>
+        </inputAssignments>
+        <object>TASKRAY__Project__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Project_Archive</name>
+        <label>Update Project - Archive</label>
+        <locationX>626</locationX>
+        <locationY>1899</locationY>
+        <connector>
+            <targetReference>Redirect_on_Flow_Finish</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>faultScreen_1</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TASKRAY__Status__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>TASKRAY__Project__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Project_Customer_Onboarding_Score</name>
+        <label>Update Project - Customer Onboarding Score</label>
+        <locationX>479</locationX>
+        <locationY>1132</locationY>
+        <connector>
+            <targetReference>Success</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>faultScreen_0</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TASKRAY__trCustomerOnboardingScore__c</field>
+            <value>
+                <elementReference>varCustomerOnboardingScore</elementReference>
+            </value>
+        </inputAssignments>
+        <object>TASKRAY__Project__c</object>
+    </recordUpdates>
+    <screens>
+        <description>The completion screen that shows when External Sentiment has been pre-populated.</description>
+        <name>Complete_Your_Onboarding_Project_Both_Sentiments_Prepopulated</name>
+        <label>Complete Your Onboarding Project</label>
+        <locationX>780</locationX>
+        <locationY>299</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_Project_3</targetReference>
+        </connector>
+        <fields>
+            <name>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went_3</name>
+            <choiceReferences>choiceInternalSentimentDefaultValue</choiceReferences>
+            <choiceReferences>choiceSetInternalSentiment</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceInternalSentimentDefaultValue</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied Are You with How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how you think the onboarding project went from an internal perspective.  This field maps to the &apos;Internal Sentiment&apos; picklist on the TaskRay Project and contributes to the calculation of the Customer Onboarding Score.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Onboarding_Summary_Notes_3</name>
+            <defaultValue>
+                <stringValue>{!recordvarProject.TASKRAY__trOnboardingSummaryNotes__c}</stringValue>
+            </defaultValue>
+            <fieldText>Onboarding Summary Notes</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle.  Maps to the Onboarding Summary Notes field on the TaskRay Project.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>How_Satisfied_is_the_Customer_With_How_This_Onboarding_Project_Went_3</name>
+            <choiceReferences>choiceExternalSentimentDefaultValue</choiceReferences>
+            <choiceReferences>choiceSetExternalSentiment</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceExternalSentimentDefaultValue</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied is the Customer With How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how your customer thinks the onboarding project went from an external perspective.  This field maps to the &apos;Internal Sentiment&apos; picklist on the TaskRay Project and contributes to the calculation of the Customer Onboarding Score.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Customer_Feedback_3</name>
+            <defaultValue>
+                <stringValue>{!recordvarProject.TASKRAY__trExternalFeedback__c}</stringValue>
+            </defaultValue>
+            <fieldText>Customer Feedback</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Use this field to capture external feedback about a customer&apos;s onboarding experience.  Maps to the &quot;External Feedback&quot; field on the TaskRay Project.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>ClickToContinue3</name>
+            <fieldText>&lt;p&gt;Click &apos;Next&apos; to complete this project and calculate the Customer Onboarding Score.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>The completion screen that shows when External Sentiment has been pre-populated.</description>
+        <name>Complete_Your_Onboarding_Project_External_Sentiment_Prepopulated</name>
+        <label>Complete Your Onboarding Project</label>
+        <locationX>583</locationX>
+        <locationY>293</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_Project_2</targetReference>
+        </connector>
+        <fields>
+            <name>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went_2</name>
+            <choiceReferences>choiceNotApplicable</choiceReferences>
+            <choiceReferences>choiceSetInternalSentiment</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceNotApplicable</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied Are You with How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how you think the onboarding project went from an internal perspective.  This field maps to the &apos;Internal Sentiment&apos; picklist on the TaskRay Project and contributes to the calculation of the Customer Onboarding Score.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Onboarding_Summary_Notes_2</name>
+            <defaultValue>
+                <stringValue>{!recordvarProject.TASKRAY__trOnboardingSummaryNotes__c}</stringValue>
+            </defaultValue>
+            <fieldText>Onboarding Summary Notes</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle.  Maps to the Onboarding Summary Notes field on the TaskRay Project.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>How_Satisfied_is_the_Customer_with_How_This_Onboarding_Project_Went_2</name>
+            <choiceReferences>choiceExternalSentimentDefaultValue</choiceReferences>
+            <choiceReferences>choiceSetExternalSentiment</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceExternalSentimentDefaultValue</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied is the Customer with How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how your customer thinks the onboarding project went from an external perspective.  This field maps to the &apos;Internal Sentiment&apos; picklist on the TaskRay Project and contributes to the calculation of the Customer Onboarding Score.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Customer_Feedback_2</name>
+            <defaultValue>
+                <stringValue>{!recordvarProject.TASKRAY__trExternalFeedback__c}</stringValue>
+            </defaultValue>
+            <fieldText>Customer Feedback</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Use this field to capture external feedback about a customer&apos;s onboarding experience.  Maps to the &quot;External Feedback&quot; field on the TaskRay Project.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>ClickToContinue2</name>
+            <fieldText>&lt;p&gt;Click &apos;Next&apos; to complete this project and calculate the Customer Onboarding Score.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>The completion screen that shows when Internal Sentiment has been prepopulated.</description>
+        <name>Complete_Your_Onboarding_Project_Internal_Sentiment_Prepopulated</name>
+        <label>Complete Your Onboarding Project</label>
+        <locationX>361</locationX>
+        <locationY>291</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_Project_1</targetReference>
+        </connector>
+        <fields>
+            <name>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went_1</name>
+            <choiceReferences>choiceInternalSentimentDefaultValue</choiceReferences>
+            <choiceReferences>choiceSetInternalSentiment</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceInternalSentimentDefaultValue</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied Are You with How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how you think the onboarding project went from an internal perspective.  This field maps to the &apos;Internal Sentiment&apos; picklist on the TaskRay Project and contributes to the calculation of the Customer Onboarding Score.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Onboarding_Summary_Notes_1</name>
+            <defaultValue>
+                <stringValue>{!recordvarProject.TASKRAY__trOnboardingSummaryNotes__c}</stringValue>
+            </defaultValue>
+            <fieldText>Onboarding Summary Notes</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle.  Maps to the Onboarding Summary Notes field on the TaskRay Project.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>How_Satisfied_is_the_Customer_with_How_This_Onboarding_Project_Went_1</name>
+            <choiceReferences>choiceNotApplicable</choiceReferences>
+            <choiceReferences>choiceSetExternalSentiment</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceNotApplicable</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied is the Customer with How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how your customer thinks the onboarding project went from an external perspective.  This field maps to the &apos;Internal Sentiment&apos; picklist on the TaskRay Project and contributes to the calculation of the Customer Onboarding Score.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Customer_Feedback_1</name>
+            <defaultValue>
+                <stringValue>{!recordvarProject.TASKRAY__trExternalFeedback__c}</stringValue>
+            </defaultValue>
+            <fieldText>Customer Feedback</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Use this field to capture external feedback about a customer&apos;s onboarding experience.  Maps to the &quot;External Feedback&quot; field on the TaskRay Project.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>ClickToContinue1</name>
+            <fieldText>&lt;p&gt;Click &apos;Next&apos; to complete this project and calculate the Customer Onboarding Score.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>The completion screen that shows when Internal &amp; External Sentiment are not pre-populated.</description>
+        <name>Complete_Your_Onboarding_Project_Not_Prepopulated</name>
+        <label>Complete Your Onboarding Project</label>
+        <locationX>180</locationX>
+        <locationY>290</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_Project</targetReference>
+        </connector>
+        <fields>
+            <name>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went</name>
+            <choiceReferences>choiceSetInternalSentiment</choiceReferences>
+            <choiceReferences>choiceNotApplicable</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceNotApplicable</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied Are You with How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how you think the onboarding project went from an internal perspective.  This field maps to the &apos;Internal Sentiment&apos; picklist on the TaskRay Project and contributes to the calculation of the Customer Onboarding Score.</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Onboarding_Summary_Notes</name>
+            <defaultValue>
+                <stringValue>{!recordvarProject.TASKRAY__trOnboardingSummaryNotes__c}</stringValue>
+            </defaultValue>
+            <fieldText>Onboarding Summary Notes</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle.  Maps to the Onboarding Summary Notes field on the TaskRay Project.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>How_Satisfied_is_the_Customer_with_How_This_Onboarding_Project_Went</name>
+            <choiceReferences>choiceSetExternalSentiment</choiceReferences>
+            <choiceReferences>choiceNotApplicable</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceNotApplicable</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied is the Customer with How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how your customer thinks the onboarding project went from an external perspective.  This field maps to the &apos;Internal Sentiment&apos; picklist on the TaskRay Project and contributes to the calculation of the Customer Onboarding Score.</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Customer_Feedback</name>
+            <defaultValue>
+                <stringValue>{!recordvarProject.TASKRAY__trExternalFeedback__c}</stringValue>
+            </defaultValue>
+            <fieldText>Customer Feedback</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Use this field to capture external feedback about a customer&apos;s onboarding experience.  Maps to the &quot;External Feedback&quot; field on the TaskRay Project.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>ClickToContinue</name>
+            <fieldText>&lt;p&gt;Click &apos;Next&apos; to complete this project and calculate the Customer Onboarding Score.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>faultScreen</name>
+        <label>faultScreen</label>
+        <locationX>469</locationX>
+        <locationY>453</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>faultMessage</name>
+            <fieldText>Something went wrong, here are some additional details for your System Administrator: {!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>faultScreen_0</name>
+        <label>faultScreen</label>
+        <locationX>648</locationX>
+        <locationY>1131</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>faultMessage_0</name>
+            <fieldText>Something went wrong, here are some additional details for your System Administrator: {!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>faultScreen_1</name>
+        <label>faultScreen</label>
+        <locationX>889</locationX>
+        <locationY>1713</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>faultMessage_1</name>
+            <fieldText>Something went wrong, here are some additional details for your System Administrator: {!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Success</name>
+        <label>Success!</label>
+        <locationX>479</locationX>
+        <locationY>1305</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Populate_Account_Desired_Outcomes</targetReference>
+        </connector>
+        <fields>
+            <name>successPrompt</name>
+            <fieldText>&lt;p&gt;Great work, you successfully completed your onboarding project!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!formulaCustomerOnboardingScoreCheck}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Choose from the following additional options before clicking &apos;Next&apos; to return to TaskRay:&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>blankSpace</name>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Archive_This_Project</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Archive This Project</fieldText>
+            <fieldType>InputField</fieldType>
+            <helpText>Check this box to automatically archive this project after finishing this process.  Archiving a project will remove the project, its related task groups and tasks, and its sub-projects from all TaskRay boards. However, you will still have the ability to access archived projects through list views, reports and dashboards, as well as by using the Archived board, project, and task filters in TaskRay.</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Populate_Desired_Outcomes_on_Account</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Populate Desired Outcomes on Account</fieldText>
+            <fieldType>InputField</fieldType>
+            <helpText>Check this box to automatically populate this project&apos;s &apos;Desired Outcomes&apos; on the related Account.</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Populate_Customer_Onboarding_Score_on_Account</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Populate Customer Onboarding Score on Account</fieldText>
+            <fieldType>InputField</fieldType>
+            <helpText>Check this box to automatically populate this project&apos;s &apos;Customer Onboarding Score&apos; on the related Account.</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Get_Project</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>collectionvarTaskGroups</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>TASKRAY__trTaskGroup__c</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>recordvarCurrentTaskGroup</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>TASKRAY__trTaskGroup__c</objectType>
+    </variables>
+    <variables>
+        <name>recordvarProject</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>TASKRAY__Project__c</objectType>
+    </variables>
+    <variables>
+        <name>varCustomerOnboardingScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>1</scale>
+    </variables>
+</Flow>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- TaskRay Project Field Set --></label>
+        <name>TASKRAY__Projects_Field_Set</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- TaskRay Field Trickler Field Set --></label>
+        <name>TASKRAY__TaskRay_Field_Trickler</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- TaskRay Projects (Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project Rate Card --></label>
+        <name>Project_Rate_Card__c</name>
+        <relationshipLabel><!-- TaskRay Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Share to Chatter Groups (ID) --></label>
+        <name>TASKRAY__ChatterGroupSharingIds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Share to Chatter Groups (Name) --></label>
+        <name>TASKRAY__ChatterGroupSharingNames__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Update Pending --></label>
+        <name>TASKRAY__Dependent_Update_Pending__c</name>
+    </fields>
+    <fields>
+        <label><!-- Color --></label>
+        <name>TASKRAY__ProjectColor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated End Date --></label>
+        <name>TASKRAY__Project_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Project --></label>
+        <name>TASKRAY__Project_Parent__c</name>
+        <relationshipLabel><!-- Child Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>TASKRAY__Project_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Archived --></label>
+        <name>TASKRAY__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__TextColor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>TASKRAY__trAccount__c</name>
+        <relationshipLabel><!-- TaskRay Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Actual Billable Time (hrs) --></label>
+        <name>TASKRAY__trActualBillableHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date of when the project was completed. --></help>
+        <label><!-- Actual Completion Date --></label>
+        <name>TASKRAY__trActualCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days that it took to complete the project. --></help>
+        <label><!-- Actual Duration --></label>
+        <name>TASKRAY__trActualDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Time (hrs) --></label>
+        <name>TASKRAY__trActualHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- A behind-the-scenes field that controls the addition/removal of the TaskRay Forms Public Site Guest User to the Project Team. --></help>
+        <label><!-- Add Forms Guest User to Project Team --></label>
+        <name>TASKRAY__trAddFormsGuestUserToProjectTeam__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available for External Sharing --></label>
+        <name>TASKRAY__trAvailableExternal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Schedule --></label>
+        <name>TASKRAY__trBusinessHours__c</name>
+        <relationshipLabel><!-- TaskRay Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates a Project has been successfully cloned from a template. This field is automatically set to true when the clone operation is complete. --></help>
+        <label><!-- Clone Operation Complete --></label>
+        <name>TASKRAY__trCloneOperationComplete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a project is complete. --></help>
+        <label><!-- Completed --></label>
+        <name>TASKRAY__trCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress --></label>
+        <name>TASKRAY__trCompletionPercentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current On-Hold Duration (days) --></label>
+        <name>TASKRAY__trCurrentOnHoldDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- A calculated customer onboarding score based on a project&apos;s Initial Projected Duration vs. Actual Duration and the average of Internal &amp; External Sentiment. --></help>
+        <label><!-- Customer Onboarding Score --></label>
+        <name>TASKRAY__trCustomerOnboardingScore__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture a customer&apos;s desired outcome(s) for their onboarding process. Can be populated from the Desired Outcomes field on Opportunity. --></help>
+        <label><!-- Desired Outcomes --></label>
+        <name>TASKRAY__trDesiredOutcomes__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is controlled behind-the-scenes and determines if a Project is a draft template. --></help>
+        <label><!-- Draft --></label>
+        <name>TASKRAY__trDraft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Billable Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedBillableHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Estimated number of days that it should take to complete the project as scheduled. --></help>
+        <label><!-- Estimated Duration --></label>
+        <name>TASKRAY__trEstimatedDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture external feedback about a customer&apos;s onboarding experience. --></help>
+        <label><!-- External Feedback --></label>
+        <name>TASKRAY__trExternalFeedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Sharing Link --></label>
+        <name>TASKRAY__trExternalLink__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture the external sentiment of a customer onboarding project. --></help>
+        <label><!-- External Sentiment --></label>
+        <name>TASKRAY__trExternalSentiment__c</name>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied</masterLabel>
+            <translation><!-- Unsatisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Unsatisfied</masterLabel>
+            <translation><!-- Very Unsatisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Use this to generate the Onboarding Feedback Form Link which can be shared with a customer to capture their external feedback and sentiment. --></help>
+        <label><!-- Generate Onboarding Feedback Form --></label>
+        <name>TASKRAY__trGenerateOnboardingFeedbackForm__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the date of when the project was initially projected to be completed. --></help>
+        <label><!-- Initial Projected Completion Date --></label>
+        <name>TASKRAY__trInitialProjectedCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the duration of the project as it was initially projected. --></help>
+        <label><!-- Initial Projected Duration --></label>
+        <name>TASKRAY__trInitialProjectedDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture the internal sentiment of a customer onboarding project. --></help>
+        <label><!-- Internal Sentiment --></label>
+        <name>TASKRAY__trInternalSentiment__c</name>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied</masterLabel>
+            <translation><!-- Unsatisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Unsatisfied</masterLabel>
+            <translation><!-- Very Unsatisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nickname --></label>
+        <name>TASKRAY__trNickname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Times On-Hold --></label>
+        <name>TASKRAY__trOnHoldCount__c</name>
+    </fields>
+    <fields>
+        <help><!-- The most recent date that a project has been marked as on hold. --></help>
+        <label><!-- On-Hold Date --></label>
+        <name>TASKRAY__trOnHoldDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates that a project has been marked as on hold. --></help>
+        <label><!-- On-Hold --></label>
+        <name>TASKRAY__trOnHold__c</name>
+    </fields>
+    <fields>
+        <help><!-- A link to the TaskRay Onboarding Feedback Form which can be shared with a customer to capture their external feedback and sentiment. --></help>
+        <label><!-- Onboarding Feedback Form Link --></label>
+        <name>TASKRAY__trOnboardingFeedbackFormLink__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle. --></help>
+        <label><!-- Onboarding Summary Notes --></label>
+        <name>TASKRAY__trOnboardingSummaryNotes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>TASKRAY__trOpportunity__c</name>
+        <relationshipLabel><!-- TaskRay Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pending Interview Count --></label>
+        <name>TASKRAY__trPendingInterviewCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous On-Hold Duration (days) --></label>
+        <name>TASKRAY__trPreviousOnHoldDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to identify the primary customer contact for onboarding. --></help>
+        <label><!-- Primary Onboarding Contact --></label>
+        <name>TASKRAY__trPrimaryOnboardingContact__c</name>
+        <relationshipLabel><!-- Primary Onboarding Contact (TaskRay Projects) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TASKRAY__trStatus__c</name>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Determines the task weighting type of this Project&apos;s Tasks. Will override the org-wide setting for task weighting, if populated. --></help>
+        <label><!-- Task Weighting Type --></label>
+        <name>TASKRAY__trTaskWeightingType__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time-Based</masterLabel>
+            <translation><!-- Time-Based --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Use this field to provide a description of a Template Project. --></help>
+        <label><!-- Template Description --></label>
+        <name>TASKRAY__trTemplateDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Template Library Source --></label>
+        <name>TASKRAY__trTemplateLibrarySource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Source --></label>
+        <name>TASKRAY__trTemplateSource__c</name>
+        <relationshipLabel><!-- Cloned Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Template --></label>
+        <name>TASKRAY__trTemplate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total On-Hold Duration (days) --></label>
+        <name>TASKRAY__trTotalOnHoldDuration__c</name>
+    </fields>
+    <layouts>
+        <layout>Project Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label><!-- Added to TaskRay Project Team --></label>
+        <name>TASKRAY__Project_Member_added_in_TaskRay</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can mark the project as completed. Contact your system administrator if you would like access to this functionality. --></errorMessage>
+        <name>TASKRAY__Completing_Project_Restricted_to_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can edit the Customer Onboarding Score. Contact your system administrator if you would like access to this field. --></errorMessage>
+        <name>TASKRAY__Editing_Score_Restricted_to_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can make the project available for external sharing. Contact your system administrator if you would like access to this field. --></errorMessage>
+        <name>TASKRAY__External_Sharing_Restricted_to_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can make the project available for external onboarding feedback. Contact your system administrator if you would like access to this field. --></errorMessage>
+        <name>TASKRAY__Feedback_Form_Restricted_to_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Project Nicknames cannot have spaces --></errorMessage>
+        <name>TASKRAY__No_spaces_in_Nickname</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- TaskRay_Project_Clone --></label>
+        <name>TASKRAY__TaskRay_Project_Clone</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_in_TaskRay --></label>
+        <name>TASKRAY__View_in_TaskRay</name>
+    </webLinks>
+</CustomObjectTranslation>

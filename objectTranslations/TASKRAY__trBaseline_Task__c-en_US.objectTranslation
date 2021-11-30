@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Archived --></label>
+        <name>TASKRAY__Archived__c</name>
+    </fields>
+    <fields>
+        <label><!-- Blocked --></label>
+        <name>TASKRAY__Blocked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated End Date --></label>
+        <name>TASKRAY__Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- List --></label>
+        <name>TASKRAY__List__c</name>
+        <picklistValues>
+            <masterLabel>Finished</masterLabel>
+            <translation><!-- Finished --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holding</masterLabel>
+            <translation><!-- Holding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prioritized</masterLabel>
+            <translation><!-- Prioritized --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Started</masterLabel>
+            <translation><!-- Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Number of business days that it took to complete the task. --></help>
+        <label><!-- Actual Business Duration --></label>
+        <name>TASKRAY__trActualBusinessDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date of when the task was completed. --></help>
+        <label><!-- Actual Completion Date --></label>
+        <name>TASKRAY__trActualCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days that it took to complete the task (includes nonworking days). --></help>
+        <label><!-- Actual Duration --></label>
+        <name>TASKRAY__trActualDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Baseline --></label>
+        <name>TASKRAY__trBaselineProject__c</name>
+        <relationshipLabel><!-- TaskRay Task Baselines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Task Group Baseline --></label>
+        <name>TASKRAY__trBaseline_Task_Group__c</name>
+        <relationshipLabel><!-- TaskRay Task Baselines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estimated Business Duration --></label>
+        <name>TASKRAY__trBusinessDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a task was completed before its scheduled Estimated End Date. --></help>
+        <label><!-- Completed Ahead of Schedule --></label>
+        <name>TASKRAY__trCompletedAheadOfSchedule2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a task was completed after its scheduled Estimated End Date. --></help>
+        <label><!-- Completed Behind Schedule --></label>
+        <name>TASKRAY__trCompletedBehindSchedule2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed --></label>
+        <name>TASKRAY__trCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Duration --></label>
+        <name>TASKRAY__trDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date Variance --></label>
+        <name>TASKRAY__trEndDateVariance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedHours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Milestone --></label>
+        <name>TASKRAY__trIsMilestone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Baseline Long Name --></label>
+        <name>TASKRAY__trLongName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Tracks the number of times the task was marked as blocked. --></help>
+        <label><!-- Number of Times Blocked --></label>
+        <name>TASKRAY__trNumberOfTimesBlocked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date Variance --></label>
+        <name>TASKRAY__trStartDateVariance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>TASKRAY__trStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task --></label>
+        <name>TASKRAY__trTask__c</name>
+        <relationshipLabel><!-- TaskRay Task Baselines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Actual Time (hrs) --></label>
+        <name>TASKRAY__trTotalTimeOnTask__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a task was ever blocked. --></help>
+        <label><!-- Was Task Ever Blocked? --></label>
+        <name>TASKRAY__trWasTaskEverBlocked__c</name>
+    </fields>
+    <layouts>
+        <layout>TaskRay Task Baseline Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Group Id --></label>
+        <name>TASKRAY__GroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Project --></label>
+        <name>TASKRAY__Project__c</name>
+        <relationshipLabel><!-- TaskRay Team --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- User or Group Id --></label>
+        <name>TASKRAY__UserOrGroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>TASKRAY__User__c</name>
+        <relationshipLabel><!-- TaskRay Team --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Added by Sharing Rule --></label>
+        <name>TASKRAY__trAddedBySharingRule__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Access Level --></label>
+        <name>TASKRAY__trInitialAccessLevel__c</name>
+        <picklistValues>
+            <masterLabel>Edit</masterLabel>
+            <translation><!-- Edit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read</masterLabel>
+            <translation><!-- Read --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Member Key --></label>
+        <name>TASKRAY__trProjectMemberKey__c</name>
+    </fields>
+    <layouts>
+        <layout>TaskRay Contributor Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Team members must be associated with a User or Group Id. --></errorMessage>
+        <name>TASKRAY__Require_User_Or_Group</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Company Registration Number --></label>
+        <name>Company_Registration_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Contact Person Email --></label>
+        <name>Finance_Contact_Person_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Contact Person --></label>
+        <name>Finance_Contact_Person__c</name>
+    </fields>
+    <fields>
+        <label><!-- Harvest Id --></label>
+        <name>HarvId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Licence Type --></label>
+        <name>Licence_Type__c</name>
+        <picklistValues>
+            <masterLabel>B2B Commerce</masterLabel>
+            <translation><!-- B2B Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B2C Commerce</masterLabel>
+            <translation><!-- B2C Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPQ</masterLabel>
+            <translation><!-- CPQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communities</masterLabel>
+            <translation><!-- Communities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conga</masterLabel>
+            <translation><!-- Conga --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datorama</masterLabel>
+            <translation><!-- Datorama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Einstein</masterLabel>
+            <translation><!-- Einstein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Cloud</masterLabel>
+            <translation><!-- Financial Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Cloud</masterLabel>
+            <translation><!-- Marketing Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mulesoft</masterLabel>
+            <translation><!-- Mulesoft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pardot</masterLabel>
+            <translation><!-- Pardot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform</masterLabel>
+            <translation><!-- Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quip</masterLabel>
+            <translation><!-- Quip --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Cloud</masterLabel>
+            <translation><!-- Sales Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Cloud</masterLabel>
+            <translation><!-- Service Cloud --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Opción para combinar las cantidades de múltiples activos para el mismo producto en una partida cuando se genera el presupuesto de renovación.</help>
+        <label><!-- Combine Asset Quantities --></label>
+        <name>SBQQ__AssetQuantitiesCombined__c</name>
+    </fields>
+    <fields>
+        <help>Active esta opción para combinar activos y suscripciones de múltiples contratos con plazos compartidos. Cada contrato con plazos compartidos genera de forma predeterminada un grupo separado en el presupuesto de renovación.</help>
+        <label><!-- Combine Co-Termed Contracts --></label>
+        <name>SBQQ__CoTermedContractsCombined__c</name>
+    </fields>
+    <fields>
+        <help>Determina el momento en que los contratos terminan de forma compartida</help>
+        <label><!-- Co-Termination Event --></label>
+        <name>SBQQ__CoTerminationEvent__c</name>
+        <picklistValues>
+            <masterLabel>Add-on</masterLabel>
+            <translation>Complemento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation>Renovación</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Determina el modo en que los contratos de servicios y suscripciones terminan de forma compartida para este cliente.</help>
+        <label><!-- Contract Co-Termination --></label>
+        <name>SBQQ__ContractCoTermination__c</name>
+        <picklistValues>
+            <masterLabel>Always</masterLabel>
+            <translation>Siempre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation>Nunca</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prompt</masterLabel>
+            <translation>Preguntar</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Oportunidad predeterminada para esta cuenta empleada en un módulo de comercio electrónico para obtener la lista de precios del cliente y asociarla con presupuestos de &quot;carrito de la compra&quot;.</help>
+        <label><!-- Default Opportunity --></label>
+        <name>SBQQ__DefaultOpportunity__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Seleccione esta opción si no se deben heredar los precios contratados desde la cuenta principal.</help>
+        <label><!-- Ignore Parent Contracted Prices --></label>
+        <name>SBQQ__IgnoreParentContractedPrices__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione la casilla de verificación para mantener la jerarquía del paquete en presupuestos de renovación y correcciones.</help>
+        <label><!-- Preserve Bundle Structure --></label>
+        <name>SBQQ__PreserveBundle__c</name>
+    </fields>
+    <fields>
+        <help>Ingrese la fecha hasta la que se deben mantener los precios.</help>
+        <label><!-- Price Hold End --></label>
+        <name>SBQQ__PriceHoldEnd__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione Basado en activos para hacer que las renovaciones se basen en los activos de una cuenta o seleccione Basado en suscripciones para hacer que las renovaciones se basen en las suscripciones creadas desde un presupuesto.</help>
+        <label><!-- Renewal Model --></label>
+        <name>SBQQ__RenewalModel__c</name>
+        <picklistValues>
+            <masterLabel>Asset Based</masterLabel>
+            <translation>Basado en activos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Based</masterLabel>
+            <translation>Basado en contratos</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Utilice &quot;Igual&quot; para mantener el mismo precio pagado la última vez. Utilice &quot;Lista&quot; para utilizar el precio de lista actual. Utilice &quot;Incremento&quot; para utilizar el precio pagado la última vez más un incremento.</help>
+        <label><!-- Renewal Pricing Method --></label>
+        <name>SBQQ__RenewalPricingMethod__c</name>
+        <picklistValues>
+            <masterLabel>List</masterLabel>
+            <translation>Lista</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same</masterLabel>
+            <translation>Igual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uplift</masterLabel>
+            <translation>Incremento</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Se selecciona si esta cuenta tiene certificados activos</help>
+        <label><!-- Tax-Exempt --></label>
+        <name>SBQQ__TaxExempt__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>No</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>Sí</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Salesforce AE --></label>
+        <name>Salesforce_AE__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field stores a calculated customer onboarding score based on a TaskRay Project related to this Account. --></help>
+        <label><!-- Customer Onboarding Score --></label>
+        <name>TASKRAY__trCustomerOnboardingScore__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture a customer&apos;s desired outcome(s). Can be populated from the Desired Outcomes field on TaskRay Project. --></help>
+        <label><!-- Desired Outcomes --></label>
+        <name>TASKRAY__trDesiredOutcomes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarding Duration --></label>
+        <name>TASKRAY__trOnboardingDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used by TaskRay to record the actual end date of the onboarding project associated with this account. --></help>
+        <label><!-- Onboarding End --></label>
+        <name>TASKRAY__trOnboardingEndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used by TaskRay to record the actual start date of the onboarding project associated with this account. --></help>
+        <label><!-- Onboarding Start --></label>
+        <name>TASKRAY__trOnboardingStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- VAT Number --></label>
+        <name>VAT_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Account Summary --></label>
+            <section>Account Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CPQ Account Layout</layout>
+        <sections>
+            <label>Información adicional</label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label>Vínculos personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Información de renovación/Plazo compartido</label>
+            <section>Renewal/Co-Term Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Assets --></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Renew_Assets --></label>
+        <name>SBQQ__Renew_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_To_Prospect_Insight --></label>
+        <name>pi__Send_To_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,9 @@
+Good day {!Employee_Information__c.Name},
+
+Please note that your {!Employee_Expiring_Documents__c.Document_Type__c} with the following details {!Employee_Expiring_Documents__c.Document_Variant__c} will be expiring {!Employee_Expiring_Documents__c.Expiry_Date__c}.
+
+Please take the necessary steps to renew the above mentioned document/ card. 
+
+
+Regards,
+EXAH Support

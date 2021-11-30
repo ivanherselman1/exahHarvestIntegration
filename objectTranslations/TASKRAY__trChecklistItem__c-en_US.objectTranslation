@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Completed --></label>
+        <name>TASKRAY__Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Task --></label>
+        <name>TASKRAY__Project_Task__c</name>
+        <relationshipLabel><!-- TaskRay Checklist Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>TASKRAY__SortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Checklist Group --></label>
+        <name>TASKRAY__trChecklistGroup__c</name>
+        <relationshipLabel><!-- TaskRay Checklist Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- My Checklist Item --></label>
+        <name>TASKRAY__trIsMyChecklistItem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Checklist Item Name --></label>
+        <name>TASKRAY__trLongName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>TASKRAY__trOwner__c</name>
+        <relationshipLabel><!-- TaskRay Checklist Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project Id --></label>
+        <name>TASKRAY__trProjectId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Source --></label>
+        <name>TASKRAY__trTemplateSource__c</name>
+        <relationshipLabel><!-- Cloned Checklist Items --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>TaskRay Checklist Item Layout</layout>
+        <sections>
+            <label><!-- Checklist Long Name --></label>
+            <section>Checklist Long Name</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

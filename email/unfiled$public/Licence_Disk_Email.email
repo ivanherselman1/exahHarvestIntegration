@@ -1,0 +1,5 @@
+Good day {!Employee_Information__c.Name},
+
+Please note your Licence Disk for {!Employee_Information__c.Vehicle_1_Make_and_Variant__c} will be expiring on {!Employee_Information__c.Vehicle_1_Licence_Disk_Expiry_Date__c}. 
+
+Please remember to renew your licence disk.

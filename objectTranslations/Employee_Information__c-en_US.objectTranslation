@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Employee Information</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Employee Information</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cell Phone Number --></label>
+        <name>Cell_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please use the following format: YYYY/MM/DD --></help>
+        <label><!-- Date of Birth --></label>
+        <name>Date_of_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Address --></label>
+        <name>Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee Income Tax Number --></label>
+        <name>Employee_Income_Tax_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee Surname --></label>
+        <name>Employee_Surname__c</name>
+    </fields>
+    <fields>
+        <help><!-- Employee full names --></help>
+        <label><!-- Full Names --></label>
+        <name>Full_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Home Address --></label>
+        <name>Home_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID Number --></label>
+        <name>ID_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next of Kin Contact Number --></label>
+        <name>Next_of_Kin_Contact_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name and Surname of person to contact in case of emergency. --></help>
+        <label><!-- Next of Kin (ICOE) --></label>
+        <name>Next_of_Kin_ICOE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Passport Expiry Date --></label>
+        <name>Passport_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Passport Issue Date --></label>
+        <name>Passport_Issue_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Passport Number --></label>
+        <name>Passport_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sponsor --></label>
+        <name>Sponsor__c</name>
+        <picklistValues>
+            <masterLabel>Augustine</masterLabel>
+            <translation><!-- Augustine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brendan</masterLabel>
+            <translation><!-- Brendan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elicus</masterLabel>
+            <translation><!-- Elicus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hendri</masterLabel>
+            <translation><!-- Hendri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ivan</masterLabel>
+            <translation><!-- Ivan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Izak</masterLabel>
+            <translation><!-- Izak --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leandi</masterLabel>
+            <translation><!-- Leandi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lochner</masterLabel>
+            <translation><!-- Lochner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rikus</masterLabel>
+            <translation><!-- Rikus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ruan</masterLabel>
+            <translation><!-- Ruan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tiaan</masterLabel>
+            <translation><!-- Tiaan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wian</masterLabel>
+            <translation><!-- Wian --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vehicle 1 Licence Disk Expiry Date --></label>
+        <name>Vehicle_1_Licence_Disk_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Examples: BMW 320D, Mercedes 220d, Toyota FJ Cruiser etc. --></help>
+        <label><!-- Vehicle 1 Make and Variant --></label>
+        <name>Vehicle_1_Make_and_Variant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle 1 Registration Number --></label>
+        <name>Vehicle_1_Registration_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle 2 Licence Disk Expiry Date --></label>
+        <name>Vehicle_2_Licence_Disk_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Examples: BMW 320D, Mercedes 220d, Toyota FJ Cruiser etc. --></help>
+        <label><!-- Vehicle 2 Make and Variant --></label>
+        <name>Vehicle_2_Make_and_Variant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle 2 Registration Number --></label>
+        <name>Vehicle_2_Registration_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle 3 Licence Disk Expiry Date --></label>
+        <name>Vehicle_3_Licence_Disk_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Examples: BMW 320D, Mercedes 220d, Toyota FJ Cruiser etc. --></help>
+        <label><!-- Vehicle 3 Make and Variant --></label>
+        <name>Vehicle_3_Make_and_Variant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle 3 Registration Number --></label>
+        <name>Vehicle_3_Registration_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Employee Information Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Add Contributors Async --></label>
+        <name>TASKRAY__trAddContributorsAsync__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines working and non-working days for scheduling tasks. &quot;None&quot; treats every day as a working day; &quot;simple&quot; sets Saturdays and Sundays as non-working days; &quot;native&quot; allows linking custom business hour schedules and holidays to projects. --></help>
+        <label><!-- Project Schedule --></label>
+        <name>TASKRAY__trBusinessDayMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batching board transaction delay in ms --></label>
+        <name>TASKRAY__trChangeItemDebounceDelay__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Community TLD --></label>
+        <name>TASKRAY__trCommunityTLDOverride__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trCompletionPercentageInFuture__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting makes lightning components navigate to record homes. --></help>
+        <label><!-- Components Nav to Record Home --></label>
+        <name>TASKRAY__trComponentsNavToStdUI__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting makes lightning components navigate to the TaskRay Visualforce page instead of record homes. --></help>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trComponentsNavToTRVF__c</name>
+    </fields>
+    <fields>
+        <help><!-- This toggles TaskRay&apos;s checks for updates from other users. Disabling it will have less impact on Salesforce servers, but there may be issues regarding multiple users updating the same tasks.
+
+Default value is &quot;Checked&quot; --></help>
+        <label><!-- Notification Polling Enabled --></label>
+        <name>TASKRAY__trConcurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Contact Support link --></label>
+        <name>TASKRAY__trContactSupportOverride__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create repeat tasks in the future --></label>
+        <name>TASKRAY__trCreateRepeatInFuture__c</name>
+    </fields>
+    <fields>
+        <label><!-- trCustomCSSURL --></label>
+        <name>TASKRAY__trCustomCSSURL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sets the org-wide custom task weighting default value. Controlled from the TaskRay Tools &amp; Settings menu. Defaults to 1. Minimum of 0. --></help>
+        <label><!-- Custom Task Weighting Default --></label>
+        <name>TASKRAY__trCustomWeightDefault__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Flex Filter Set --></label>
+        <name>TASKRAY__trDefaultFFSet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detail Modal - Experimental Redirect --></label>
+        <name>TASKRAY__trDetailModalExperimentalRedirect__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting applies when TaskRay is used in the Console Lightning App and controls how Projects and Tasks are viewed. --></help>
+        <label><!-- Do not use console tabs for TaskRay Nav --></label>
+        <name>TASKRAY__trDoNotUseConsoleTabNav__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Legacy Dependencies (Deprecated) --></label>
+        <name>TASKRAY__trEnableDependencyUpdates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Multiple Dependencies --></label>
+        <name>TASKRAY__trEnableMultipleDependencies__c</name>
+    </fields>
+    <fields>
+        <help><!-- Allows for the use of multiple Task record types per Project. --></help>
+        <label><!-- Enable Multiple Task Record Types --></label>
+        <name>TASKRAY__trEnableMultipleTaskRecordTypes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retry transaction on lock exceptions --></label>
+        <name>TASKRAY__trEnableRecordLockRetry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Slack Integration --></label>
+        <name>TASKRAY__trEnableSlackIntegration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Time Tracking --></label>
+        <name>TASKRAY__trEnableTimeTracking__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Enhanced Cloning --></label>
+        <name>TASKRAY__trEnhancedCloning__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enhanced Filter Mode --></label>
+        <name>TASKRAY__trEnhancedFilterMode__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting enables enhanced detail modal layouts in TaskRay.  This allows for the use of native Salesforce object page layouts instead of field sets. --></help>
+        <label><!-- Enhanced Modal Layouts --></label>
+        <name>TASKRAY__trEnhancedModalLayouts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude Archived Tasks from Progress % --></label>
+        <name>TASKRAY__trExcludeArchivedFromCompletion__c</name>
+    </fields>
+    <fields>
+        <help><!-- Excludes specified tabs from the TaskRay Project modal. Accepted values are Chatter, Files, Team, Insights, On-Hold, FluxPlanner, Quip, Box, GridBuddy, CustomTab1, CustomTab2. All values are case sensitive, should be separated by commas, and include no spaces. For example, to exclude Chatter and Team, input: Chatter,Team --></help>
+        <label><!-- Excluded Project Tabs --></label>
+        <name>TASKRAY__trExcludedProjectTabs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Excludes specified tabs from the TaskRay Task Group modal. Accepted values are Chatter, Files. For example, to exclude Chatter and Files, input: Chatter,Files --></help>
+        <label><!-- Excluded Task Group Tabs --></label>
+        <name>TASKRAY__trExcludedTaskGroupTabs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Excludes specified tabs from the TaskRay Task modal. Accepted values are Chatter, Files, Checklist, Time, FluxPlanner, Quip, Box, CustomTab1, CustomTab2. All values are case sensitive, should be separated by commas, and include no spaces. For example, to exclude Time and Checklist, input: Time,Checklist --></help>
+        <label><!-- Excluded Task Tabs --></label>
+        <name>TASKRAY__trExcludedTaskTabs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Excludes specified views from the TaskRay interface.  Accepted values are &quot;MyWork&quot;, &quot;Kanban&quot;, &quot;Row&quot;, &quot;Plan&quot;, &quot;Calendar&quot;, &quot;Portfolio&quot;, &quot;TemplatePerformance&quot; separated by commas. --></help>
+        <label><!-- Excluded Views --></label>
+        <name>TASKRAY__trExcludedViews__c</name>
+    </fields>
+    <fields>
+        <help><!-- The URL of the Public Site used to host TaskRay Forms. --></help>
+        <label><!-- TaskRay Forms Public Site URL --></label>
+        <name>TASKRAY__trFormsPublicSiteURL__c</name>
+    </fields>
+    <fields>
+        <help><!-- The User ID of the TaskRay Forms Public Site Guest User. --></help>
+        <label><!-- TaskRay Forms Public Site User Id --></label>
+        <name>TASKRAY__trFormsPublicSiteUserId__c</name>
+    </fields>
+    <fields>
+        <label><!-- trGridBuddyURLForProject --></label>
+        <name>TASKRAY__trGridBuddyURLForProject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide Contact Support link --></label>
+        <name>TASKRAY__trHideContactSupport__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applies to orgs that have Quip installed. --></help>
+        <label><!-- Hide Quip from Project and Task modals --></label>
+        <name>TASKRAY__trHideQuipTab__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Scratch Org? (Bracket Labs Only) --></label>
+        <name>TASKRAY__trIsScratchOrg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trListColor_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lock Down Sharing on New Projects --></label>
+        <name>TASKRAY__trLockDownSharingOnNewProjects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Public group hierarchy query level --></label>
+        <name>TASKRAY__trNestedGroupHierarchy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Toggle off locking for board transaction --></label>
+        <name>TASKRAY__trNoLockChangeItemUpdates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maximum Notification Age --></label>
+        <name>TASKRAY__trNotificationAge__c</name>
+    </fields>
+    <fields>
+        <help><!-- The API Name of the Screen Flow to display on the TaskRay Onboarding Feedback Form Public Site. --></help>
+        <label><!-- Onboarding Feedback Flow --></label>
+        <name>TASKRAY__trOnboardingFeedbackFlow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Only show task owners in team sidebar --></label>
+        <name>TASKRAY__trOnlyShowOwnersInTeamTab__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opt out of TaskRay Sort Order updates --></label>
+        <name>TASKRAY__trOptOutOfSortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opt out of standard TaskRay sharing --></label>
+        <name>TASKRAY__trOptOutOfTRSharing__c</name>
+    </fields>
+    <fields>
+        <help><!-- This value is the interval that TaskRay checks for updates from other users. This value can range from 5 to 99 seconds, with a default value of 10. Higher values reduce Salesforce server impact but increase the time period between update notifications. --></help>
+        <label><!-- Polling Interval --></label>
+        <name>TASKRAY__trPollingInterval__c</name>
+    </fields>
+    <fields>
+        <help><!-- The API Name of the Screen Flow to run when TaskRay Projects are completed via the &apos;Complete&apos; button. Works with the &apos;Project Completion Option&apos; custom setting. --></help>
+        <label><!-- Project Completion Flow --></label>
+        <name>TASKRAY__trProjectCompletionFlow__c</name>
+    </fields>
+    <fields>
+        <help><!-- TaskRay Projects can be completed via the &apos;Complete&apos; button.  &quot;Simple&quot; offers the choice to set the &apos;Completed&apos; checkbox on a Project; &quot;Choice&quot; will prompt the user to choose how to complete the project. --></help>
+        <label><!-- Project Completion Option --></label>
+        <name>TASKRAY__trProjectCompletionOption__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Modal Custom Tab 1 Label --></label>
+        <name>TASKRAY__trProjectModalCustomTab1Label__c</name>
+    </fields>
+    <fields>
+        <help><!-- TaskRay will substitute the project id for $id in this url --></help>
+        <label><!-- Project Modal Custom Tab 1 URL --></label>
+        <name>TASKRAY__trProjectModalCustomTab1URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Modal Custom Tab 2 Label --></label>
+        <name>TASKRAY__trProjectModalCustomTab2Label__c</name>
+    </fields>
+    <fields>
+        <help><!-- TaskRay will substitute the project id for $id in this url --></help>
+        <label><!-- Project Modal Custom Tab 2 URL --></label>
+        <name>TASKRAY__trProjectModalCustomTab2URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- This value determines the size of the project query that will be run if incremental querying is turned on. --></help>
+        <label><!-- Board Filter: Project Query Increment --></label>
+        <name>TASKRAY__trProjectQueryIncrement__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Public Site URL --></label>
+        <name>TASKRAY__trPublicSiteURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Public Site User Id --></label>
+        <name>TASKRAY__trPublicSiteUserId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Run transactions via worker --></label>
+        <name>TASKRAY__trRunTransactionsInWorker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trRunTransactionsOnMainThread__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Sync Metadata Cache Button --></label>
+        <name>TASKRAY__trShowSyncMetadataCacheButton__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 1 --></label>
+        <name>TASKRAY__trTaskLabelColor_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 2 --></label>
+        <name>TASKRAY__trTaskLabelColor_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 3 --></label>
+        <name>TASKRAY__trTaskLabelColor_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 4 --></label>
+        <name>TASKRAY__trTaskLabelColor_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 5 --></label>
+        <name>TASKRAY__trTaskLabelColor_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 6 --></label>
+        <name>TASKRAY__trTaskLabelColor_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 7 --></label>
+        <name>TASKRAY__trTaskLabelColor_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 8 --></label>
+        <name>TASKRAY__trTaskLabelColor_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Label Color 9 --></label>
+        <name>TASKRAY__trTaskLabelColor_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Modal Custom Tab 1 Label --></label>
+        <name>TASKRAY__trTaskModalCustomTab1Label__c</name>
+    </fields>
+    <fields>
+        <help><!-- TaskRay will substitute the task id for $id in this url --></help>
+        <label><!-- Task Modal Custom Tab 1 URL --></label>
+        <name>TASKRAY__trTaskModalCustomTab1URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Modal Custom Tab 2 Label --></label>
+        <name>TASKRAY__trTaskModalCustomTab2Label__c</name>
+    </fields>
+    <fields>
+        <help><!-- TaskRay will substitute the task id for $id in this url --></help>
+        <label><!-- Task Modal Custom Tab 2 URL --></label>
+        <name>TASKRAY__trTaskModalCustomTab2URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- This value determines the size of the task query that will be run if incremental querying is turned on. --></help>
+        <label><!-- Board Filter: Task Query Increment --></label>
+        <name>TASKRAY__trTaskQueryIncrement__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sets the org-wide task weighting type, from the TaskRay Tools &amp; Settings menu. Accepted values are: &apos;Standard&apos; (also null), &apos;Time-Based&apos;, or &apos;Custom&apos;. --></help>
+        <label><!-- Task Weighting Type --></label>
+        <name>TASKRAY__trTaskWeightingType__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting controls the default value of the Internal Only field on Tasks --></help>
+        <label><!-- Mark tasks as internal only by default --></label>
+        <name>TASKRAY__trTasksInternalOnlyByDefault__c</name>
+    </fields>
+    <fields>
+        <label><!-- trTasksOnBoardLimit --></label>
+        <name>TASKRAY__trTasksOnBoardLimit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Applies to TaskRay Time entries and the default value of the Billable checkbox --></help>
+        <label><!-- Mark time entries as billable by default --></label>
+        <name>TASKRAY__trTimeBillableDefault__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show the Type field on time entries --></label>
+        <name>TASKRAY__trTimeDisplayTypeField__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trUpdateDependenciesAfterClone__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting does not use the &quot;Added to TaskRay Project Team&quot; sharing reason. Not using this reason allows Tasks to be assigned to a High Volume external user. --></help>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trUseDefaultSharingReason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use old project clone modal --></label>
+        <name>TASKRAY__trUseOldCloneProjectModal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Deprecated SVG Printing is no longer supported. --></help>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trUseSVGPlanViewPrint__c</name>
+    </fields>
+</CustomObjectTranslation>

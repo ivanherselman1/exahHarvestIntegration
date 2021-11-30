@@ -1,0 +1,7 @@
+***A New Case Has Been Assigned To You***
+
+Subject: {!Case.Subject}
+Client: {!Case.Account}
+Contact: {!Case.Contact}
+
+Detail Link: {!Case.Link}

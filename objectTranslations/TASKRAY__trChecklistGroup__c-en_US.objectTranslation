@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>TASKRAY__SortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Task --></label>
+        <name>TASKRAY__TaskForGroup__c</name>
+        <relationshipLabel><!-- TaskRay Checklists --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Available for External Sharing --></label>
+        <name>TASKRAY__trAvailableExternal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Source --></label>
+        <name>TASKRAY__trTemplateSource__c</name>
+        <relationshipLabel><!-- Cloned Checklists --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

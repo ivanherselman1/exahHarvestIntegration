@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Assigns the feedback collected on the previous screen to the appropriate fields on the TaskRay Project record variable.</description>
+        <name>Assign_Feedback_to_Project_Fields</name>
+        <label>Assign Feedback to Project Fields</label>
+        <locationX>408</locationX>
+        <locationY>592</locationY>
+        <assignmentItems>
+            <assignToReference>recordvarTaskRayProject.TASKRAY__trExternalFeedback__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Onboarding_Feedback</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>recordvarTaskRayProject.TASKRAY__trExternalSentiment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <choices>
+        <name>choiceNotApplicableDefault</name>
+        <choiceText>N/A</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <description>Evaluates the current TaskRay Project to determine which screen to display on the page.</description>
+        <name>Screen_Decision</name>
+        <label>Screen Decision</label>
+        <locationX>399</locationX>
+        <locationY>258</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Invalid_Project</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordvarTaskRayProject.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Onboarding_Feedback_Form_Invalid_Project</targetReference>
+            </connector>
+            <label>Invalid Project</label>
+        </rules>
+        <rules>
+            <name>External_Sentiment_Populated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordvarTaskRayProject.TASKRAY__trExternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Onboarding_Feedback_Form_Completed</targetReference>
+            </connector>
+            <label>External Sentiment Populated</label>
+        </rules>
+        <rules>
+            <name>Valid_Project</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordvarTaskRayProject.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordvarTaskRayProject.TASKRAY__trExternalSentiment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Onboarding_Feedback_Form</targetReference>
+            </connector>
+            <label>Valid Project</label>
+        </rules>
+    </decisions>
+    <description>This template Flow works with the TaskRay Onboarding Feedback Form to gather customer feedback and sentiment about their onboarding experience.</description>
+    <dynamicChoiceSets>
+        <name>choicesetExternalSentiment</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>TASKRAY__trExternalSentiment__c</picklistField>
+        <picklistObject>TASKRAY__Project__c</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>TaskRay Customer Onboarding Feedback Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>TaskRay Customer Onboarding Feedback Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Finds the source TaskRay Project record.</description>
+        <name>Lookup_Project</name>
+        <label>Lookup Project</label>
+        <locationX>404</locationX>
+        <locationY>145</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Screen_Decision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>projectId</elementReference>
+            </value>
+        </filters>
+        <object>TASKRAY__Project__c</object>
+        <outputReference>recordvarTaskRayProject</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>TASKRAY__trExternalSentiment__c</queriedFields>
+        <queriedFields>TASKRAY__trExternalFeedback__c</queriedFields>
+    </recordLookups>
+    <screens>
+        <name>faultScreen</name>
+        <label>faultScreen</label>
+        <locationX>552</locationX>
+        <locationY>751</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>faultMessage</name>
+            <fieldText>Something went wrong - please contact your vendor or system administrator with the following details about the error: {!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Onboarding_Feedback_Form</name>
+        <label>Onboarding Feedback Form</label>
+        <locationX>407</locationX>
+        <locationY>450</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_Feedback_to_Project_Fields</targetReference>
+        </connector>
+        <fields>
+            <name>headerText</name>
+            <fieldText>Please take a moment to provide some feedback about your onboarding experience:</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>How_Satisfied_Are_You_with_How_This_Onboarding_Project_Went</name>
+            <choiceReferences>choiceNotApplicableDefault</choiceReferences>
+            <choiceReferences>choicesetExternalSentiment</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>choiceNotApplicableDefault</defaultSelectedChoiceReference>
+            <fieldText>How Satisfied Are You with How This Onboarding Project Went?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>A satisfaction score based on how you think the onboarding project went.</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Onboarding_Feedback</name>
+            <fieldText>Onboarding Feedback</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <helpText>Please provide feedback about your onboarding experience.</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Onboarding_Feedback_Form_Completed</name>
+        <label>Onboarding Feedback Form - Completed</label>
+        <locationX>180</locationX>
+        <locationY>255</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>false</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>formCompletedMessage</name>
+            <fieldText>You&apos;ve already completed the Onboarding Feedback Form for this project.</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Onboarding_Feedback_Form_Invalid_Project</name>
+        <label>Onboarding Feedback Form - Invalid Project</label>
+        <locationX>638</locationX>
+        <locationY>256</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>false</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>invalidProjectMessage</name>
+            <fieldText>This project is invalid or no longer exists.</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Success</name>
+        <label>Success</label>
+        <locationX>406</locationX>
+        <locationY>869</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>successMessage</name>
+            <fieldText>Thank you for completing the Onboarding Feedback Form!</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <startElementReference>Lookup_Project</startElementReference>
+    <status>Draft</status>
+    <variables>
+        <description>A variable that stores the source TaskRay Project record ID.</description>
+        <name>projectId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>A variable that stores the source TaskRay Project record.</description>
+        <name>recordvarTaskRayProject</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>TASKRAY__Project__c</objectType>
+    </variables>
+</Flow>

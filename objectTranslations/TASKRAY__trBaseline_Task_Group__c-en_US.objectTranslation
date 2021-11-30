@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Date of when the task group was completed. --></help>
+        <label><!-- Actual Completion Date --></label>
+        <name>TASKRAY__trActualCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days that it took to complete the task group. --></help>
+        <label><!-- Actual Duration --></label>
+        <name>TASKRAY__trActualDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Archived --></label>
+        <name>TASKRAY__trArchived__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a task group is complete. --></help>
+        <label><!-- Completed --></label>
+        <name>TASKRAY__trCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress --></label>
+        <name>TASKRAY__trCompletionPercentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date Variance --></label>
+        <name>TASKRAY__trEndDateVariance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated End Date --></label>
+        <name>TASKRAY__trEndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the date of when the task group was initially projected to be completed. --></help>
+        <label><!-- Initial Projected Completion Date --></label>
+        <name>TASKRAY__trInitialProjectedCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the duration of the task group as it was initially projected. --></help>
+        <label><!-- Initial Projected Duration --></label>
+        <name>TASKRAY__trInitialProjectedDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Group Baseline Long Name --></label>
+        <name>TASKRAY__trLongName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Baseline --></label>
+        <name>TASKRAY__trProject_Baseline__c</name>
+        <relationshipLabel><!-- TaskRay Task Group Baselines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date Variance --></label>
+        <name>TASKRAY__trStartDateVariance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>TASKRAY__trStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Group --></label>
+        <name>TASKRAY__trTaskGroup__c</name>
+        <relationshipLabel><!-- TaskRay Task Group Baselines --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>TaskRay Task Group Baseline Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

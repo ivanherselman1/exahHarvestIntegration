@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This is a TaskRay object used to store historical snapshot information on TaskRay Projects.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>TASKRAY__Project_End__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Estimated End Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__Project_Start__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Archived</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trActualCompletionDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date of when the project is completed. Works in conjunction with the Completed checkbox field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of when the project was completed.</inlineHelpText>
+        <label>Actual Completion Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trActualDuration__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to track the number of days that it actually took to complete the project. Calculated as the difference between the project Start Date and the project Actual Completion Date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days that it took to complete the project.</inlineHelpText>
+        <label>Actual Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trActualHours__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Actual Time (hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trCompleted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates whether a project is complete. Works in conjunction with the Actual Completion Date field to determine the duration of the project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether a project is complete.</inlineHelpText>
+        <label>Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trCompletionPercentage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Progress</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trDesiredOutcomes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A customer&apos;s desired outcome(s) for their onboarding process. Can be populated from the Desired Outcomes field on Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to capture a customer&apos;s desired outcome(s) for their onboarding process. Can be populated from the Desired Outcomes field on Opportunity.</inlineHelpText>
+        <label>Desired Outcomes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trEndDateVariance__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(
+ OR(
+    ISBLANK(TASKRAY__trProject__r.TASKRAY__Project_End__c),
+    ISBLANK(TASKRAY__Project_End__c)
+ ), 
+ NULL,
+ TASKRAY__trProject__r.TASKRAY__Project_End__c - TASKRAY__Project_End__c)</formula>
+        <label>End Date Variance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trEstimatedDuration__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to track the estimated number of days that it should take to complete the project as scheduled. Calculated as the difference between the project Start Date and the project Estimated End Date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated number of days that it should take to complete the project as scheduled.</inlineHelpText>
+        <label>Estimated Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trEstimatedHours__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Estimated Time (hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trExternalFeedback__c</fullName>
+        <deprecated>false</deprecated>
+        <description>External feedback about a customer&apos;s onboarding experience.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to capture external feedback about a customer&apos;s onboarding experience.</inlineHelpText>
+        <label>External Feedback</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trExternalSentiment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The external sentiment of a customer onboarding project based on a satisfaction score.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to capture the external sentiment of a customer onboarding project.</inlineHelpText>
+        <label>External Sentiment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>Very Unsatisfied</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>Unsatisfied</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>Satisfied</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>Very Satisfied</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trInitialProjectedCompletionDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a “behind the scenes” field that is used to track the date of when the project is initially projected to be completed. This date will update accordingly to accommodate any scheduling changes up until the project start date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>“Behind the scenes” field. This is the date of when the project was initially projected to be completed.</inlineHelpText>
+        <label>Initial Projected Completion Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trInitialProjectedDuration__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a “behind the scenes” field that is used to track the number of days between the project Start Date and the project Initial Projected Completion Date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>“Behind the scenes” field. This is the duration of the project as it was initially projected.</inlineHelpText>
+        <label>Initial Projected Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trInternalSentiment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The internal sentiment of a customer onboarding project based on a satisfaction score.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to capture the internal sentiment of a customer onboarding project.</inlineHelpText>
+        <label>Internal Sentiment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>Very Unsatisfied</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>Unsatisfied</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>Neutral</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>Satisfied</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>Very Satisfied</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trLongName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>$Label.taskray__taskray_baseline_longname_prefix +&quot; &quot;+ TEXT(DATEVALUE(CreatedDate))+&quot;: &quot;+ TASKRAY__trProject__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Baseline Long Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trNameSuffix__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Baseline Name Suffix</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trNotes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trOnboardingSummaryNotes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle.</inlineHelpText>
+        <label>Onboarding Summary Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trPrimaryOnboardingContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Identifies the primary customer contact for onboarding.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to identify the primary customer contact for onboarding.</inlineHelpText>
+        <label>Primary Onboarding Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Primary Onboarding Contact (TaskRay Baselines)</relationshipLabel>
+        <relationshipName>trPrimaryOnboardingProjectBaselines</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trProject__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <referenceTo>TASKRAY__Project__c</referenceTo>
+        <relationshipLabel>TaskRay Baselines</relationshipLabel>
+        <relationshipName>TaskRay_Baselines</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trStartDateVariance__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( 
+OR( 
+ISBLANK(TASKRAY__trProject__r.TASKRAY__Project_Start__c), 
+ISBLANK(TASKRAY__Project_Start__c) 
+), 
+NULL, 
+TASKRAY__trProject__r.TASKRAY__Project_Start__c - TASKRAY__Project_Start__c)</formula>
+        <label>Start Date Variance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TASKRAY__trStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to set the status of a project.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>4bca81</fullName>
+                    <default>false</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>ffb75d</fullName>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>d4504c</fullName>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>TaskRay Baseline</label>
+    <nameField>
+        <label>Baseline Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>TaskRay Baselines</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>TASKRAY__trCompletionPercentage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>TASKRAY__trNotes__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>TASKRAY__trProject__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>TASKRAY__trCompletionPercentage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TASKRAY__trNotes__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TASKRAY__trProject__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TASKRAY__trCompletionPercentage__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TASKRAY__trNotes__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TASKRAY__trProject__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>TASKRAY__trCompletionPercentage__c</searchFilterFields>
+        <searchFilterFields>TASKRAY__trProject__c</searchFilterFields>
+        <searchResultsAdditionalFields>TASKRAY__trCompletionPercentage__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASKRAY__trNotes__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASKRAY__trProject__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

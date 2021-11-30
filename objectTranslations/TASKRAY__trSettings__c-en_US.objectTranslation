@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Projects Component Selected Filter Id --></label>
+        <name>TASKRAY__ProjectComponentFilterId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Always show the search inputs --></label>
+        <name>TASKRAY__trAlwaysShowProjectSearch__c</name>
+    </fields>
+    <fields>
+        <label><!-- trCurrentColumnSortType --></label>
+        <name>TASKRAY__trCurrentColumnSortType__c</name>
+    </fields>
+    <fields>
+        <label><!-- trCurrentFilterView --></label>
+        <name>TASKRAY__trCurrentFilterView__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current power filter for user --></label>
+        <name>TASKRAY__trCurrentPowerFilter__c</name>
+    </fields>
+    <fields>
+        <label><!-- trCurrentProjectRecordType --></label>
+        <name>TASKRAY__trCurrentProjectRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- trCurrentRowViewGroup__c --></label>
+        <name>TASKRAY__trCurrentRowViewGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- trCurrentTaskRecordType --></label>
+        <name>TASKRAY__trCurrentTaskRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- trCurrentView --></label>
+        <name>TASKRAY__trCurrentView__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Daily Summary Emails --></label>
+        <name>TASKRAY__trDailyNotifications__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trDisableQuotes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Task Reassign Emails --></label>
+        <name>TASKRAY__trDisableTaskReassignEmails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Restart Getting Started Wizard --></label>
+        <name>TASKRAY__trDisplaySetupWizard__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Personal Tasks --></label>
+        <name>TASKRAY__trDisplayUnassignedTasks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide new feature notification --></label>
+        <name>TASKRAY__trDoNotDisplayNewFeatureNotification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide new release modal --></label>
+        <name>TASKRAY__trDoNotDisplayNewReleaseModal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide the initial TaskRay tour --></label>
+        <name>TASKRAY__trDoNotShowInitialTour__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dynamic Power Filter - Project Filter Id --></label>
+        <name>TASKRAY__trDynamicFilterProjectFilterId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dynamic Power Filter - Task Filter Id --></label>
+        <name>TASKRAY__trDynamicFilterTaskFilterId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__trEnableQuotes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden board filters --></label>
+        <name>TASKRAY__trHiddenBoardFilters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide Performance Tab --></label>
+        <name>TASKRAY__trHidePortfolioTab__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inbox View As User Id --></label>
+        <name>TASKRAY__trInboxViewAsUser__c</name>
+    </fields>
+    <fields>
+        <label><!-- Info Tab - Components to hide --></label>
+        <name>TASKRAY__trInfoTabHiddenComponents__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opt out of Project Team notifications --></label>
+        <name>TASKRAY__trOptOutOfProjectTeamNotifications__c</name>
+    </fields>
+    <fields>
+        <label><!-- User opted into user email --></label>
+        <name>TASKRAY__trOptedIntoUserEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- trPlanViewColumns (LocalStorage) --></label>
+        <name>TASKRAY__trPlanViewColumns__c</name>
+    </fields>
+    <fields>
+        <label><!-- trPlanViewZoomLevel__c --></label>
+        <name>TASKRAY__trPlanViewZoomLevel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portfolio View - All projects expanded --></label>
+        <name>TASKRAY__trProjectViewAllExpanded__c</name>
+    </fields>
+    <fields>
+        <label><!-- trPortfolioViewColumns (LocalStorage) --></label>
+        <name>TASKRAY__trProjectViewColumns__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portfolio View - Hide Owner Icons --></label>
+        <name>TASKRAY__trProjectViewHideOwnerIcons__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project View - Hide Progress Bars --></label>
+        <name>TASKRAY__trProjectViewHideProgressBars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portfolio View - Selected Filter Id --></label>
+        <name>TASKRAY__trProjectViewSelectedFilterId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portfolio View - Single Project --></label>
+        <name>TASKRAY__trProjectViewSingleProject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reverse Columns --></label>
+        <name>TASKRAY__trReverseColumns__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show sub projects on single project view --></label>
+        <name>TASKRAY__trSPSearchShowSubs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selected Board Tab (AllWork Performance) --></label>
+        <name>TASKRAY__trSelectedBoardTab__c</name>
+    </fields>
+    <fields>
+        <label><!-- trSelectedGroup --></label>
+        <name>TASKRAY__trSelectedGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- trSelectedLists --></label>
+        <name>TASKRAY__trSelectedLists__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Id for the Single Project view --></label>
+        <name>TASKRAY__trSingleProjectViewId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Slack User Id --></label>
+        <name>TASKRAY__trSlackUserId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Standard View Sort Orders --></label>
+        <name>TASKRAY__trStandardViewSortOrders__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Group Mode Active --></label>
+        <name>TASKRAY__trTaskGroupModeActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto-unfollow Archived Project Tasks --></label>
+        <name>TASKRAY__trUnfollowArchived__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of views to show --></label>
+        <name>TASKRAY__trViewShowCount__c</name>
+    </fields>
+</CustomObjectTranslation>

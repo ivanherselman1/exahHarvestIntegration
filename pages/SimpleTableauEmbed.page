@@ -1,0 +1,4 @@
+<apex:page showheader="false" sidebar="false">
+    <apex:iframe src="https://10ax.online.tableau.com/t/exahdev526687/views/EXAH_demo/Sheet1?:embed=y&:showShareOptions=false&toolbar=false&display_count=no&:showVizHome=no" height="600px" width="100%" scrolling="true">
+    </apex:iframe>
+</apex:page>

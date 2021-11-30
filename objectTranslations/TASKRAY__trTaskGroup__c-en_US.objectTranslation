@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Project --></label>
+        <name>TASKRAY__Project__c</name>
+        <relationshipLabel><!-- Task Groups --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>TASKRAY__trAccount__c</name>
+        <relationshipLabel><!-- TaskRay Task Groups --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Actual Billable Time (hrs) --></label>
+        <name>TASKRAY__trActualBillableHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date of when the task group was completed. --></help>
+        <label><!-- Actual Completion Date --></label>
+        <name>TASKRAY__trActualCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days that it took to complete the task group. --></help>
+        <label><!-- Actual Duration --></label>
+        <name>TASKRAY__trActualDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Time (hrs) --></label>
+        <name>TASKRAY__trActualHours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Archived --></label>
+        <name>TASKRAY__trArchived__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates a Task Group has been successfully cloned from a template.  This field is automatically set to true when the clone operation is complete. --></help>
+        <label><!-- Clone Operation Complete --></label>
+        <name>TASKRAY__trCloneOperationComplete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a task group is complete. --></help>
+        <label><!-- Completed --></label>
+        <name>TASKRAY__trCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress --></label>
+        <name>TASKRAY__trCompletionPercentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated End Date --></label>
+        <name>TASKRAY__trEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Billable Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedBillableHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Estimated number of days that it should take to complete the task group as scheduled. --></help>
+        <label><!-- Estimated Duration --></label>
+        <name>TASKRAY__trEstimatedDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the date of when the task group was initially projected to be completed. --></help>
+        <label><!-- Initial Projected Completion Date --></label>
+        <name>TASKRAY__trInitialProjectedCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the duration of the task group as it was initially projected. --></help>
+        <label><!-- Initial Projected Duration --></label>
+        <name>TASKRAY__trInitialProjectedDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>TASKRAY__trOpportunity__c</name>
+        <relationshipLabel><!-- TaskRay Task Groups --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>TASKRAY__trSortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>TASKRAY__trStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Source --></label>
+        <name>TASKRAY__trTemplateSource__c</name>
+        <relationshipLabel><!-- Cloned Task Groups --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Template --></label>
+        <name>TASKRAY__trTemplate__c</name>
+    </fields>
+    <layouts>
+        <layout>TaskRay Task Group Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

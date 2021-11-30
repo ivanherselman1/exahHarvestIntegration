@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>43 Air School</name>
+    <queueMembers>
+        <users>
+            <user>elicus@exahza.co.za</user>
+            <user>izak@exahza.co.za</user>
+            <user>rikus@exahza.co.za</user>
+            <user>wian@exahza.co.za</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>TASKRAY__Project_Task__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>TASKRAY__Project__c</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>divan@exah.co.za</contactEmail>
+    <label>Tableau Online</label>
+    <samlConfig>
+        <acsUrl>https://sso.online.tableau.com/public/sp/SSO/7bac1bd4-0696-442a-9ece-488e04a23113</acsUrl>
+        <encryptionType>AES_128</encryptionType>
+        <entityUrl>https://sso.online.tableau.com/public/sp/metadata?alias=7bac1bd4-0696-442a-9ece-488e04a23113</entityUrl>
+        <issuer>https://exahza.my.salesforce.com</issuer>
+        <samlNameIdFormat>Persistent</samlNameIdFormat>
+        <samlSigningAlgoType>SHA1</samlSigningAlgoType>
+        <samlSubjectType>FederationId</samlSubjectType>
+    </samlConfig>
+</ConnectedApp>

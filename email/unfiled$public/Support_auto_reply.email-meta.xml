@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Support_auto_reply</letterhead>
+    <name>Support auto-reply</name>
+    <style>freeForm</style>
+    <subject>Exah Support - Case Number {!Case.CaseNumber} Case Thread {!Case.Thread_Id}</subject>
+    <textOnly>Hi There
+
+This is an automated response to confirm that we have received your support request and rest assured we will reply within 24 hours.
+
+Please reply to this email for all further communication regarding this matter and ensure the case number is included in the subject field.
+
+Your case number is {!Case.CaseNumber}.
+
+Best Regards,
+Exah Support
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

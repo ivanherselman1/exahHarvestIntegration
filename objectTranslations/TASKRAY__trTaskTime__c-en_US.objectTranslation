@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Billed Amount --></label>
+        <name>Billed_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Rate --></label>
+        <name>Billing_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- End_Time --></label>
+        <name>End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start_Time --></label>
+        <name>Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billable --></label>
+        <name>TASKRAY__Billable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>TASKRAY__Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours --></label>
+        <name>TASKRAY__Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>TASKRAY__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner --></label>
+        <name>TASKRAY__Owner__c</name>
+        <relationshipLabel><!-- TaskRay Time --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Project --></label>
+        <name>TASKRAY__Project__c</name>
+        <relationshipLabel><!-- TaskRay Time --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Task that Time object is related to. --></help>
+        <label><!-- TaskRay Task --></label>
+        <name>TASKRAY__Task__c</name>
+        <relationshipLabel><!-- TaskRay Time --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- My TaskRay Time --></label>
+        <name>TASKRAY__trIsMyTimeEntry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project ID Formula --></label>
+        <name>TASKRAY__trProjectIdFormula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Group ID Formula --></label>
+        <name>TASKRAY__trTaskGroupIdFormula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>TASKRAY__trTimeType__c</name>
+        <picklistValues>
+            <masterLabel>Admin Must Configure Values for Type</masterLabel>
+            <translation><!-- Admin Must Configure Values for Type --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Used for the Timer functionality in TaskRay. --></help>
+        <label><!-- Timer End --></label>
+        <name>TASKRAY__trTimerEnd__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used for the Timer functionality in TaskRay. --></help>
+        <label><!-- Timer Start --></label>
+        <name>TASKRAY__trTimerStart__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used for the Timer functionality in TaskRay. --></help>
+        <label><!-- Unsaved Time Entry --></label>
+        <name>TASKRAY__trUnsavedTimeEntry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time --></label>
+        <name>Time__c</name>
+    </fields>
+    <layouts>
+        <layout>TaskRay Time Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- View_TaskRay_Timesheet --></label>
+        <name>TASKRAY__View_TaskRay_Timesheet</name>
+    </webLinks>
+</CustomObjectTranslation>

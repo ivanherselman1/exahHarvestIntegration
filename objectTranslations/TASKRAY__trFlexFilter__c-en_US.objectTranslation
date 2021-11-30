@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Custom Name (Premium Only) --></label>
+        <name>TASKRAY__trCustomName__c</name>
+    </fields>
+    <fields>
+        <label><!-- API name of Flex Filter Field --></label>
+        <name>TASKRAY__trFFAPIName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object of Flex Filter Field --></label>
+        <name>TASKRAY__trFFObjectName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flex Filter Parent Object --></label>
+        <name>TASKRAY__trFFParent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flex Filter Set --></label>
+        <name>TASKRAY__trFlexFilterSet__c</name>
+        <relationshipLabel><!-- Flex Filter --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>TASKRAY__trSortOrder__c</name>
+    </fields>
+</CustomObjectTranslation>

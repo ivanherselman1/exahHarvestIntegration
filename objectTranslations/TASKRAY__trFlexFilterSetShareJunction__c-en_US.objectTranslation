@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Flex Filter Set --></label>
+        <name>TASKRAY__trFlexFilterSet__c</name>
+        <relationshipLabel><!-- Flex Filter Share --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Group --></label>
+        <name>TASKRAY__trGroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Standard Flex Filter --></label>
+        <name>TASKRAY__trStandardFlexFilterSet__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay User --></label>
+        <name>TASKRAY__trUserId__c</name>
+        <relationshipLabel><!-- Flex Filter Share --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

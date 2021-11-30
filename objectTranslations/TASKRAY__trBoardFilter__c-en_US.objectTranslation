@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Filter for User --></label>
+        <name>TASKRAY__User__c</name>
+        <relationshipLabel><!-- TaskRay Board Filters --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Possible values: (&apos;task&apos;, &apos;project&apos;) --></help>
+        <label><!-- Filter Type --></label>
+        <name>TASKRAY__filterType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Logic Configuration --></label>
+        <name>TASKRAY__logicConfig__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enhanced Filtering --></label>
+        <name>TASKRAY__trEnhancedFiltering__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Description --></label>
+        <name>TASKRAY__trFilterDescription__c</name>
+    </fields>
+    <fields>
+        <help><!-- Possible Task values: (&apos;allTasks&apos;, &apos;myTasks&apos;). Possible Project values: (&apos;allProjects&apos;, &apos;myProjects&apos;) --></help>
+        <label><!-- Filter Scope --></label>
+        <name>TASKRAY__trFilterScope__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used in Board Filter --></label>
+        <name>TASKRAY__trUsedInBoardFilter__c</name>
+    </fields>
+</CustomObjectTranslation>

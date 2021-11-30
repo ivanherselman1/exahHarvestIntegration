@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AutoFollowTasks --></label>
+        <name>TASKRAY__AutoFollowTasks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Favorite project for user --></label>
+        <name>TASKRAY__IsFavorite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Personal Project Sort Order --></label>
+        <name>TASKRAY__PersonalProjectSortOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProjectId --></label>
+        <name>TASKRAY__ProjectId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>TASKRAY__Project__c</name>
+        <relationshipLabel><!-- TaskRay View Project --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TasksOnOff --></label>
+        <name>TASKRAY__TasksOnOff__c</name>
+    </fields>
+    <fields>
+        <label><!-- UserId --></label>
+        <name>TASKRAY__UserId__c</name>
+    </fields>
+    <layouts>
+        <layout>ViewProjectTasks Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

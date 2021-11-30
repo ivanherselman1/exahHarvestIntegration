@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Dependency Type --></label>
+        <name>TASKRAY__trDependencyType__c</name>
+        <picklistValues>
+            <masterLabel>Finish-To-Finish</masterLabel>
+            <translation><!-- Finish-To-Finish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finish-To-Start</masterLabel>
+            <translation><!-- Finish-To-Start --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start-To-Finish</masterLabel>
+            <translation><!-- Start-To-Finish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start-To-Start</masterLabel>
+            <translation><!-- Start-To-Start --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lag --></label>
+        <name>TASKRAY__trLag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Predecessor Task --></label>
+        <name>TASKRAY__trPredecessorTask__c</name>
+        <relationshipLabel><!-- TaskRay Successor Dependencies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- In Schedule Conflict --></label>
+        <name>TASKRAY__trScheduleConflict__c</name>
+    </fields>
+    <fields>
+        <label><!-- Successor Task --></label>
+        <name>TASKRAY__trSuccessorTask__c</name>
+        <relationshipLabel><!-- TaskRay Dependencies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Template Source --></label>
+        <name>TASKRAY__trTemplateSource__c</name>
+        <relationshipLabel><!-- Cloned Dependencies --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>TaskRay Dependency Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>augustine@exah.co.za</contactEmail>
+    <label>Quip App</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/services/authcallback/00D0O000000rWp8UAE/Quip</callbackUrl>
+        <consumerKey>3MVG9KlmwBKoC7U0tQGO2yaWKdQNXe2Td0J3WVtaQQIMVApKWB8z4qhinJaKybvWmmZQR2JD77TU6BsLVJHld</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Web</scopes>
+        <scopes>OpenID</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <startUrl>https://exah.quip.com</startUrl>
+</ConnectedApp>

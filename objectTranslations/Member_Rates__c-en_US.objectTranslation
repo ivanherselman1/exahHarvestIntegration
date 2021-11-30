@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Member Rate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Member Rates</value>
+    </caseValues>
+    <fields>
+        <label><!-- Project Rate Card --></label>
+        <name>Project_Rate_Card__c</name>
+        <relationshipLabel><!-- Member Rates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Member Rates --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Member Rate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
