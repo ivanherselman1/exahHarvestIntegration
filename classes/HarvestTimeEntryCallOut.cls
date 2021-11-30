@@ -111,6 +111,7 @@ public class HarvestTimeEntryCallOut {
         }
        system.debug('the size of the list is '+htlist.size());
        list<TimeEntry__c> tEl =  TimeEntriesToUpsert(htList);
+            system.debug('ag nee man');
             try {
 
                 Database.UpsertResult[] results = Database.upsert(tEl, false);
